@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="AdaptiveAgrotech.exe" version="1.1.1.2" publicKeyToken="0db2b8496e8c9428" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="AdaptiveAgrotech" version="4.1.13.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="AdaptiveAgrotech.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdaptiveAgrotech.exe" size="3038632">
+      <assemblyIdentity name="AdaptiveAgrotech" version="4.1.13.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6oB478btXiKTvdnyQu6UHHK6/4qvYGv2hV3Um4CKps4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="af\AdaptiveAgrotech.resources.dll" size="32256">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="af" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>phY7uB6b85oCbQECFatpT5IHSxQDLm5+uVUi1p34K6k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\AdaptiveAgrotech.resources.dll" size="31232">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="de" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wf/8UCbuDQUpOVOs6kFwKqiR2GMeK7GL6xR44Y0LOak=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\AdaptiveAgrotech.resources.dll" size="29696">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="es" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DpISkzDIsXawnirOtfAcvDkIDQW2QzNifZ8vfgUezMY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\AdaptiveAgrotech.resources.dll" size="32256">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="fr" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Ot4+s5dhEmoLeeNBLFIzBfmOCzB1VYJIWkES+GECu9c=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\AdaptiveAgrotech.resources.dll" size="23552">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="it" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>zjGOc4KOqHy8OnpX6bW1NzvJ51BRRnsOzZohXhgJNqc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nl\AdaptiveAgrotech.resources.dll" size="31232">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="nl" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>rGvTx+ojkezQAKFy/lJMbiMPMGwaU7hh7HRQS4N/HwM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\AdaptiveAgrotech.resources.dll" size="31744">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="pl" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kpCx2Y3O2PEZbOC0w6COPEKH72CDeAbVSf0b7k463ok=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\AdaptiveAgrotech.resources.dll" size="29696">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="sk" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QWIjliv7Q8pOVG6NXqqLpOgmx7hImglH76/dTZpRhDI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="uk\AdaptiveAgrotech.resources.dll" size="35328">
+      <assemblyIdentity name="AdaptiveAgrotech.resources" version="4.1.13.0" language="uk" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0KI7k0HXpoLbOCQwlXRnVla7P22h7fh2MGPoF3qBzXQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Control.Draggable.dll" size="5632">
+      <assemblyIdentity name="Control.Draggable" version="1.0.7235.37687" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>rcYaxrKgldiaAVl75Hq51V1Qf3zwfqn5Pnz+1s4yDIQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Keypad.dll" size="60416">
+      <assemblyIdentity name="Keypad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5tWVrPN8VPP2OJjrRxKtKn/pwUa7hBeWalaKePkzq/g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OpenTK.dll" size="4345856">
+      <assemblyIdentity name="OpenTK" version="1.2.0.0" publicKeyToken="BAD199FE84EB3DF4" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ywrWMGRYeDIXe2bxzMcZnGrf/kT/Vn3tNYhFDXAh5VU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OpenTK.GLControl.dll" size="49152">
+      <assemblyIdentity name="OpenTK.GLControl" version="1.2.0.0" publicKeyToken="BAD199FE84EB3DF4" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MAsFtxJ2DZ6+6QWMcumO2xXACrD9OYC9BtZQXG4QT2I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RepeatButtonControl.dll" size="6656">
+      <assemblyIdentity name="RepeatButtonControl" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5P9qpOBzVyu1Ylyp9svc9097Sf3DmEGJp5frlmQbm18=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tinkerforge.dll" size="435200">
+      <assemblyIdentity name="Tinkerforge" version="2.1.16.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7GsirAPKxCGZKPZQdlsE3CIPKWtN5PiNuMbj7gUNwug=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebEye.Controls.WinForms.WebCameraControl.dll" size="203776">
+      <assemblyIdentity name="WebEye.Controls.WinForms.WebCameraControl" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>x4Vl6AKjpGr919lgFT2DtWgfWNTX9nY0a+B1uDWX4zU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="aChangeLog.txt" size="17917">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3Ff4yt0gLiNAIVROJRjwfXbUHMGiJlOLIVv25IIvHGo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="AdaptiveAgrotech.exe.config" size="32287">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>udCrGwUETBIOd9Y49MBjOgjMvTh9F2J1okQBuJ7rKMo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ALicense.txt" size="1497">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Nvyl4y8Fl6h5ifUcgikP86VWpJj/uw6swL90U9BbVkE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="AppIcon.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2pUGyOpNU0j69xQ5U9sr0S+wdHxUDpQUiYQz8XA4AaU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="AppIcon64.ico" size="32038">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Pj7pp1T0zc+6lz76M9JPBIBPYALUd+10MdnjJQTZvXc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Audio\Boundary.wav" size="335564">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HBrD3DbDEKYYwbuke/JZoHJiiIpTjgjXT4WN8k3oWCw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\AppIcon.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2pUGyOpNU0j69xQ5U9sr0S+wdHxUDpQUiYQz8XA4AaU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\Compass.png" size="2675">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>T8JwBjgdbGJFnM9YBkO7sYaGRla2YrhzROf1h55DT0Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\Floor.png" size="1216291">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5Z3m5nHxgVs9eryVRTz6PVhCl+Dl/2zKQxCx8MKzmXU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\Font.png" size="8790">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fA/FrKs3gyS42h6rLDpCwkz4Zka6ygEqxYBWgFkfUzQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\Landscape.png" size="415397">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JKyBJIAvpmCCOjr5U0TgDKh6rdMGkv9WutA5WMNFqKM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\LandscapeNight.png" size="118135">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wwLCErTdg6w+L3ZTb/FcnPnjVrENXFE7AqcGH0+e9ME=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\Lift.png" size="2029">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>m7/Fkrv3CigJEfzxsn669L7Nl7oKRBWLCtGQcjFfQsE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\speedo.png" size="3514">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dPWPbptqZsQlrfLsTkTdVbp+L0BcbKN4HZGg1ctBSA0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\SpeedoNedle.png" size="578">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c2e3JxM7U9sH1HnVIzGAvXwzlb82yPMQh9zBJz/dbl8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\Steer.png" size="4599">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>++WjmVnp7yTfh3oqdRjMkMnOda3gsyJhy2z6ESRV3C4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\Turn.png" size="1758">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Y1ejFd6n60HlEBKwCahp4upL2RtDc3yf71K0MzFIRS8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\TurnCancel.png" size="1670">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FjrwWvzD6z6cyUC7FRkpS+hUQzXjZNO1oyldEiFKTAc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\Images\TurnManual.png" size="1873">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Y11BEpL/x7j4k+LIm6KYcAIrlSbacKOkwcYJCcTcMxE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\YouTurnShapes\Custom.txt" size="13187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NPbTdHDUeGR+ZtU1fryOAjmV38s1xV3m8q6yfzM6Kzk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\YouTurnShapes\Keyhole.txt" size="375">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qeJYyPoeXgx7c8WG6sIPiuuW2TmvBGnIC6SSxB4paO4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\YouTurnShapes\SemiCircle.txt" size="410">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>999smunuega2TZUERaHpq5XVGqka8/OhMhS0Z8dY+2U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dependencies\YouTurnShapes\WideReturn.txt" size="10710">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2zc48nxpeFynsIMvoyzol1DQJRu6ekHk+mDA08b3f7I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="logo.ico" size="123504">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cK1h4CQZTSWzHeT70rQVG1y7l/MXZ7ByOjnhjq4mFOs=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=RSADD\Mahan" issuerKeyHash="a589285b32e084b34b8cc71680296a1489504aed" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>46Iyx1CXhKOs2YxU1RXqAlILxVuVZZyEZpSSgMRSNoc=</DigestValue></Reference></SignedInfo><SignatureValue>FYGncxegXdaW+Br+4eWOvEMgvn/2EpoC4I4QQjKVtn8IBc20S4+diGDUn3/S2/eh4CKuhdcLNk3BEn2QmhSzkqCpExLyXet5ePNlxW+k8OIRNlFGMXZtolxUCYVyUEM1NeKRyhdWqgJAIwEZktReHIf/O7pJatJD9oH0jS80jdg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>qAC098kyOqMbstwPkLJ4adIgfNP3QMo+ytc3BmWXg4iMvqwwqdbWdygThOqoZagDBt5OrUx3fJFXRM8ukL8g1ue1P3AD0AyYdDj2bPrufXLhv5/jXUGre4H1Ekz2owpoYWgAdnb6gUKLl0D6LvpfiJvG/HmicmLFYfZrnXrm0z0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="873652c480929466849c65955bc50b5202ea15d5548cd9aca3849750c732a2e3" Description="" Url=""><as:assemblyIdentity name="AdaptiveAgrotech.exe" version="1.1.1.2" publicKeyToken="0db2b8496e8c9428" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=RSADD\Mahan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EWdxqMPAi7UBGw+83QMma4qQLn/z0RP1NAFqQzndAz4=</DigestValue></Reference></SignedInfo><SignatureValue>p/Gf6R1bJaNbGyzUYyG81GcoWMFhBNKuQxeT8XU0RJ3j3T4athuJKMGk+pFbtx0ECsjIqYVtF2dzwqyaJS6MiB8Dwv28AkLDz2JyCWEpvzRLFtGWKTE/BIJVwGZYvk5edrSBLSuO0ZpHaBnl6mN2xSAZx4bx6gGoDJ4ADQWyMSA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>qAC098kyOqMbstwPkLJ4adIgfNP3QMo+ytc3BmWXg4iMvqwwqdbWdygThOqoZagDBt5OrUx3fJFXRM8ukL8g1ue1P3AD0AyYdDj2bPrufXLhv5/jXUGre4H1Ekz2owpoYWgAdnb6gUKLl0D6LvpfiJvG/HmicmLFYfZrnXrm0z0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQFcsPEHGn1p1CcUsPaPC7rjANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAUgBTAEEARABEAFwATQBhAGgAYQBuMB4XDTIwMDQxNDExMzEyNVoXDTIxMDQxNDE3MzEyNVowITEfMB0GA1UEAx4WAFIAUwBBAEQARABcAE0AYQBoAGEAbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAqAC098kyOqMbstwPkLJ4adIgfNP3QMo+ytc3BmWXg4iMvqwwqdbWdygThOqoZagDBt5OrUx3fJFXRM8ukL8g1ue1P3AD0AyYdDj2bPrufXLhv5/jXUGre4H1Ekz2owpoYWgAdnb6gUKLl0D6LvpfiJvG/HmicmLFYfZrnXrm0z0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQAWsSM+zWiw6Q/j0KaQ84tRrknOCdj+yhrdCRzHEQ+R/g1ikub8fZOhv8gikS/Y5LRdIs67lymOq/o7Wt7brkOgKpH4kT5zxOp2LVmQv0eUEczKWgvU39GYa936Nyx7YsNVYiuEe4ofSgVgRMmSJorcVmy9VDANwpjv95STRH4puQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

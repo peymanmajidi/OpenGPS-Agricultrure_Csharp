@@ -1,0 +1,9 @@
+2020-April-15 10:59:03 AM
+$FieldDir
+RSA001 myname yournbame 2020.Apr.15 10_59
+$Offsets
+489367,5920881,12
+Convergence
+-0.00224362099555244
+StartFix
+53.4368626416668,-111.160047

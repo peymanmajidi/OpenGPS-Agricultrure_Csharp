@@ -159,7 +159,8 @@ namespace AgOpenGPS
             isSpeedoOn = Settings.Default.setMenu_isSpeedoOn;
             speedoOnToolStripMenuItem.Checked = isSpeedoOn;
 
-            isAutoDayNight = Settings.Default.setDisplay_isAutoDayNight;
+            // isAutoDayNight = Settings.Default.setDisplay_isAutoDayNight;
+            isAutoDayNight = false;
             autoDayNightModeToolStripMenuItem.Checked = isAutoDayNight;
 
             isUTurnAlwaysOn = Settings.Default.setMenu_isUTurnAlwaysOn;
@@ -236,17 +237,17 @@ namespace AgOpenGPS
 
             stripSectionColor.BackColor = sectionColorDay;
 
-            if (Properties.Settings.Default.setDisplay_isTermsOn)
-            {
-                using (var form = new Form_First())
-                {
-                    var result = form.ShowDialog();
-                    if (result != DialogResult.OK)
-                    {
-                        Close();
-                    }
-                }
-            }
+            //if (Properties.Settings.Default.setDisplay_isTermsOn)
+            //{
+            //    using (var form = new Form_First())
+            //    {
+            //        var result = form.ShowDialog();
+            //        if (result != DialogResult.OK)
+            //        {
+            //            Close();
+            //        }
+            //    }
+            //}
 
             if (Properties.Settings.Default.setDisplay_isStartFullScreen)
             {
@@ -274,34 +275,44 @@ namespace AgOpenGPS
             isDay = !isDay;
             if (isDay)
             {
-                btnDayNightMode.Image = Properties.Resources.WindowNightMode;
-
-                this.BackColor = dayColor;
-                foreach (Control c in this.Controls)
-                {
-                    //if (c is Label || c is Button)
-                    {
-                        c.ForeColor = Color.Black;
-                    }
-                }
-                LineUpManualBtns();
+                DayMode();
             }
             else //nightmode
             {
-                btnDayNightMode.Image = Properties.Resources.WindowDayMode;
-                this.BackColor = nightColor;
-
-                foreach (Control c in this.Controls)
-                {
-                    {
-                        c.ForeColor = Color.White;
-                    }
-                }
-                LineUpManualBtns();
+                NightMode();
             }
 
             Properties.Settings.Default.setDisplay_isDayMode = isDay;
             Properties.Settings.Default.Save();
+        }
+
+        private void NightMode()
+        {
+            btnDayNightMode.Image = Properties.Resources.WindowDayMode;
+            this.BackColor = nightColor;
+
+            foreach (Control c in this.Controls)
+            {
+                {
+                    c.ForeColor = Color.White;
+                }
+            }
+            LineUpManualBtns();
+        }
+
+        private void DayMode()
+        {
+            btnDayNightMode.Image = Properties.Resources.WindowNightMode;
+
+            this.BackColor = dayColor;
+            foreach (Control c in this.Controls)
+            {
+                //if (c is Label || c is Button)
+                {
+                    c.ForeColor = Color.Black;
+                }
+            }
+            LineUpManualBtns();
         }
 
         private void FixPanelsAndMenus()

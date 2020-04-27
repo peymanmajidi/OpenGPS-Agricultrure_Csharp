@@ -643,6 +643,7 @@ namespace AgOpenGPS
             isJRK = Properties.Settings.Default.setAS_isJRK;
 
             isRTK = Properties.Settings.Default.setGPS_isRTK;
+           
         }
 
         //form is closing so tidy up and save settings
@@ -1163,6 +1164,16 @@ namespace AgOpenGPS
             keyboardToolStripMenuItem1.Checked = isKeyboardOn;
             Settings.Default.setDisplay_isKeyboardOn = isKeyboardOn;
             Settings.Default.Save();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void statusStripLeft_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
 
         public void GetAB()

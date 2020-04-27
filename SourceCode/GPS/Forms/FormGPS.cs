@@ -1176,6 +1176,11 @@ namespace AgOpenGPS
 
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         public void GetAB()
         {
             curve.isOkToAddPoints = false;

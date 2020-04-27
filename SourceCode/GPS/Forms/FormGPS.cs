@@ -1181,6 +1181,21 @@ namespace AgOpenGPS
 
         }
 
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            using (var form = new FormSettings(this, 0))
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    if (Properties.Settings.Default.setAS_isAutoSteerAutoOn)
+                        btnAutoSteer.Text = "R";
+                    else
+                        btnAutoSteer.Text = "M";
+                }
+            }
+        }
+
         public void GetAB()
         {
             curve.isOkToAddPoints = false;

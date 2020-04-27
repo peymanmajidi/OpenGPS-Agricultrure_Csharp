@@ -328,7 +328,7 @@ namespace AgOpenGPS
             if (!isSimple)
             {
                 toolToolbottomStripBtn.Visible = true;
-                vehicleToolStripBtn.Visible = true;
+                //vehicleToolStripBtn.Visible = true;
                 AutoSteerToolBtn.Visible = true;
 
                 lblDateTime.Visible = false;
@@ -367,7 +367,7 @@ namespace AgOpenGPS
             if (isSimple)
             {
                 toolToolbottomStripBtn.Visible = false;
-                vehicleToolStripBtn.Visible = false;
+                //vehicleToolStripBtn.Visible = false;
                 AutoSteerToolBtn.Visible = false;
 
                 lblDateTime.Visible = true;

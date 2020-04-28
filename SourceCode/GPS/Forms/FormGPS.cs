@@ -343,9 +343,7 @@ namespace AgOpenGPS
 
             stripSectionColor.Text = Application.ProductVersion.ToString(CultureInfo.InvariantCulture);
 
-            //NTRIP
-            this.lblWatch.Text = gStr.gsWaitingForGPS;
-            this.lblNTRIPSeconds.Text = gStr.gsNTRIPOff;
+
 
             //build the gesture structures
             SetupStructSizes();
@@ -576,12 +574,12 @@ namespace AgOpenGPS
                 if (Properties.Settings.Default.setNTRIP_isOn)
             {
                 isNTRIP_RequiredOn = true;
-                btnStartStopNtrip.Text = gStr.gsStop;
+               
             }
             else
             {
                 isNTRIP_RequiredOn = false;
-                btnStartStopNtrip.Text = gStr.gsStart;
+              
             }
 
             //remembered window position
@@ -643,7 +641,10 @@ namespace AgOpenGPS
             isJRK = Properties.Settings.Default.setAS_isJRK;
 
             isRTK = Properties.Settings.Default.setGPS_isRTK;
-           
+            hsbarStepDistance.Value = 30;
+            hsbarStepDistance_Scroll(sender, null);
+
+
         }
 
         //form is closing so tidy up and save settings
@@ -1129,12 +1130,6 @@ namespace AgOpenGPS
             }
         }
 
-        private void btnTestIsMapping_Click(object sender, EventArgs e)
-        {
-            isMapping = !isMapping;
-            if (isMapping) btnTestIsMapping.Text = "Mapping";
-            else btnTestIsMapping.Text = "No Map";
-        }
 
         public void GetHeadland()
         {

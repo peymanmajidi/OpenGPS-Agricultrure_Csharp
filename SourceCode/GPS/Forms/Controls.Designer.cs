@@ -20,16 +20,13 @@ namespace AgOpenGPS
                 if (isNTRIP_RequiredOn)
                 {
                     ShutDownNTRIP();
-                    btnStartStopNtrip.Text = gStr.gsStart;
-                    lblWatch.Text = gStr.gsStopped;
-                    lblNTRIPSeconds.Text = gStr.gsOffline;
+
                     isNTRIP_RequiredOn = false;
                 }
                 else
                 {
                     isNTRIP_RequiredOn = true;
-                    btnStartStopNtrip.Text = gStr.gsStop;
-                    lblWatch.Text = gStr.gsWaiting;
+
                 }
             }
             else
@@ -1514,12 +1511,7 @@ namespace AgOpenGPS
             {
    
                 panelDrag.Visible = true;
-                if (panelBatman.Visible)
-                {
-                    panelDrag.Location = new Point(240, panelDrag.Location.Y);
-                }
-                else
-                    panelDrag.Location = new Point(120, panelDrag.Location.Y);
+              
 
             }
         }
@@ -1589,7 +1581,7 @@ namespace AgOpenGPS
             //if (secondRowCounter < 8) return;
             Properties.Settings.Default.setDisplay_isBatmanOn = !Properties.Settings.Default.setDisplay_isBatmanOn;
             Properties.Settings.Default.Save();
-            SwapBatmanPanels();
+         
 
         }
         private void simplifyToolStrip_Click(object sender, EventArgs e)
@@ -1599,7 +1591,7 @@ namespace AgOpenGPS
             Settings.Default.setDisplay_isSimple = isSimple;
             Settings.Default.Save();
 
-            SwapBatmanPanels();
+            
             FixPanelsAndMenus();
         }
         //File drop down items

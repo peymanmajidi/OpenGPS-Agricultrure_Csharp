@@ -190,7 +190,7 @@ namespace AgOpenGPS
 
             //default to come up in mini panel, exit remembers 
 
-            SwapBatmanPanels();
+         
 
             if (Properties.Settings.Default.setAS_isAutoSteerAutoOn) btnAutoSteer.Text = "R";
             else btnAutoSteer.Text = "M";
@@ -205,17 +205,12 @@ namespace AgOpenGPS
 
             if (isNTRIP_RequiredOn)
             {
-                btnStartStopNtrip.Visible = true;
-                lblNTRIPSeconds.Visible = true;
-                lblWatch.Visible = true;
                 NTRIPBytesMenu.Visible = true;
                 pbarNtripMenu.Visible = true;
             }
             else
             {
-                btnStartStopNtrip.Visible = false;
-                lblNTRIPSeconds.Visible = false;
-                lblWatch.Visible = false;
+
                 NTRIPBytesMenu.Visible = false;
                 pbarNtripMenu.Visible = false;
             }
@@ -418,75 +413,12 @@ namespace AgOpenGPS
         }
 
         //hide the left panel
-        public void SwapBatmanPanels()
-        {
-            //Properties.Settings.Default.Save();
-            if (Properties.Settings.Default.setDisplay_isBatmanOn)
-            {
-                //Batman mini-panel shows
-                //if (panelSim.Left < 390) panelSim.Left = 390;
-                oglMain.Left = statusStripLeft.Width + panelBatman.Width;
-
-                if (isSimple)
-                {
-                    oglMain.Width = Width - statusStripLeft.Width - panelBatman.Width - 110;
-                    if (isFullScreen) oglMain.Width += 20;
-                }
-                else
-                {
-                    oglMain.Width = Width - statusStripLeft.Width - panelBatman.Width - 198;
-                    if (isFullScreen) oglMain.Width += 20;
-                }
-
-                panelBatman.Left = statusStripLeft.Width;
-                panelBatman.Visible = true;
-
-               
-
-                if (panelDrag.Visible) panelDrag.Left = statusStripLeft.Width + panelBatman.Width + 5;
-
-                LineUpManualBtns();
-            }
-            else
-            {
-                //no side panel
-                oglMain.Left = statusStripLeft.Width;
-                if (isSimple)
-                {
-                    oglMain.Width = Width - (statusStripLeft.Width) - 110;
-                    if (isFullScreen) oglMain.Width += 20;
-                }
-                else
-                {
-                    oglMain.Width = Width - (statusStripLeft.Width) - 198;
-                    if (isFullScreen) oglMain.Width += 20;
-                }
-                panelBatman.Visible = false;
-                
-
-
-                //if (isFullScreen) panelFieldData.Width += 20;
-
-                if (panelDrag.Visible) panelDrag.Left = statusStripLeft.Width + 10;
-
-                LineUpManualBtns();
-            }
-        }
 
         //line up section On Off Auto buttons based on how many there are
         public void LineUpManualBtns()
         {
             int oglCenter = 0;
 
-            if (panelBatman.Visible)
-            {
-                oglCenter = panelBatman.Width + statusStripLeft.Width + oglMain.Width/2;
-            }
-
-            else
-            {
-                oglCenter = statusStripLeft.Width + oglMain.Width / 2; 
-            }
 
             int top = 180;
       
@@ -1247,27 +1179,13 @@ namespace AgOpenGPS
 
             if (isNTRIP_RequiredOn)
             {
-                //update byte counter and up counter
-                if (ntripCounter > 59) lblNTRIPSeconds.Text = (ntripCounter / 60) + " Mins";
-                else if (ntripCounter < 60 && ntripCounter > 22) lblNTRIPSeconds.Text = ntripCounter + " Secs";
-                else lblNTRIPSeconds.Text = gStr.gsConnectingIn + " " + (Math.Abs(ntripCounter - 22));
+
 
                 pbarNtripMenu.Value = unchecked((byte)(tripBytes * 0.02));
                 NTRIPBytesMenu.Text = ((tripBytes) * 0.001).ToString("###,###,###") + " kb";
 
                 //watchdog for Ntrip
-                if (isNTRIP_Connecting) lblWatch.Text = gStr.gsAuthourizing;
-                else
-                {
-                    if (NTRIP_Watchdog > 10) lblWatch.Text = gStr.gsWaiting;
-                    else lblWatch.Text = gStr.gsListening;
-                }
 
-                if (sendGGAInterval > 0 && isNTRIP_Sending)
-                {
-                    lblWatch.Text = gStr.gsSendingGGA;
-                    isNTRIP_Sending = false;
-                }
             }
         }
 
@@ -1339,8 +1257,7 @@ namespace AgOpenGPS
                     //check to make sure the grid is big enough
                     worldGrid.checkZoomWorldGrid(pn.fix.northing, pn.fix.easting);
 
-                    if (panelBatman.Visible)
-                    {
+                   
                         if (isMetric)
                         {
                             lblAltitude.Text = Altitude;
@@ -1351,7 +1268,7 @@ namespace AgOpenGPS
                         }       
                         
                         lblZone.Text = pn.zone.ToString();
-                    }
+                    
 
                     if (isMetric)
                     {
@@ -1428,11 +1345,11 @@ namespace AgOpenGPS
                     }
                     else lblHz.BackColor = Color.Transparent;
 
-                    if (panelBatman.Visible)
+                    if (true)
                     {
                         //both
                         lblLatitude.Text = Latitude;
-                        lblLongitude.Text = Longitude;
+                 
 
 
                         lblRoll.Text = RollInDegrees;

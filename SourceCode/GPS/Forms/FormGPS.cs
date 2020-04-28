@@ -15,6 +15,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Resources;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace AgOpenGPS
@@ -176,7 +177,7 @@ namespace AgOpenGPS
         /// Just the tool attachment that includes the sections
         /// </summary>
         public CTool tool;
-        
+
         /// <summary>
         /// All the structs for recv and send of information out ports
         /// </summary>
@@ -392,7 +393,7 @@ namespace AgOpenGPS
             gf = new CGeoFence(this);
 
             //headland object
-            hd = new CHead( this);
+            hd = new CHead(this);
 
             //headland entry/exit sequences
             seq = new CSequence(this);
@@ -570,21 +571,21 @@ namespace AgOpenGPS
             //triangleResolution = Settings.Default.setDisplay_triangleResolution;
 
             //start udp server if required
-            if (Properties.Settings.Default.setUDP_isOn 
+            if (Properties.Settings.Default.setUDP_isOn
                 && !Properties.Settings.Default.setUDP_isInterAppOn) StartUDPServer();
 
             if (Properties.Settings.Default.setUDP_isInterAppOn) StartLocalUDPServer();
 
             //start NTRIP if required
-                if (Properties.Settings.Default.setNTRIP_isOn)
+            if (Properties.Settings.Default.setNTRIP_isOn)
             {
                 isNTRIP_RequiredOn = true;
-               
+
             }
             else
             {
                 isNTRIP_RequiredOn = false;
-              
+
             }
             this.Refresh();
 
@@ -652,8 +653,13 @@ namespace AgOpenGPS
             hsbarStepDistance_Scroll(sender, null);
 
             this.Refresh();
-            oglMain.Visible = oglBack.Visible = oglZoom.Visible = true;
+            new Thread(() =>
+            {
+                Thread.Sleep(3000);
+                picLoading.Visible = false;
+                oglMain.Visible = oglBack.Visible = oglZoom.Visible = true;
 
+            }).Start();
         }
 
         //form is closing so tidy up and save settings
@@ -1023,7 +1029,7 @@ namespace AgOpenGPS
 
         //start the UDP server
         private void StartUDPServer()
-        {            
+        {
             try
             {
                 // Initialise the delegate which updates the message received
@@ -1142,7 +1148,7 @@ namespace AgOpenGPS
 
         public void GetHeadland()
         {
-            using (var form = new FormHeadland (this))
+            using (var form = new FormHeadland(this))
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
@@ -1172,7 +1178,7 @@ namespace AgOpenGPS
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void statusStripLeft_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -1396,12 +1402,12 @@ namespace AgOpenGPS
                 oglZoom.Width = 300;
                 oglZoom.Height = 300;
             }
-                //isGPSPositionInitialized = false;
-                //offset = 0;
-                //pn.latStart = pn.latitude;
-                //pn.lonStart = pn.longitude;
+            //isGPSPositionInitialized = false;
+            //offset = 0;
+            //pn.latStart = pn.latitude;
+            //pn.lonStart = pn.longitude;
 
-                //SendSteerSettingsOutAutoSteerPort();
+            //SendSteerSettingsOutAutoSteerPort();
             isJobStarted = true;
             startCounter = 0;
 
@@ -1766,7 +1772,7 @@ namespace AgOpenGPS
                     }
 
                     //turn off
-                    double sped = 1 / ((pn.speed+5) * 0.2);
+                    double sped = 1 / ((pn.speed + 5) * 0.2);
                     if (sped < 0.2) sped = 0.2;
 
                     //keep setting the timer so full when ready to turn off
@@ -1969,15 +1975,15 @@ namespace AgOpenGPS
         {
             //match grid to cam distance and redo perspective
             if (camera.camSetDistance <= -20000) camera.gridZoom = 2000;
-            else if (camera.camSetDistance >= -20000 && camera.camSetDistance < -10000) camera.gridZoom = 2012*2;
-            else if (camera.camSetDistance >= -10000 && camera.camSetDistance < -5000) camera.gridZoom = 1006 *2;
-            else if (camera.camSetDistance >= -5000 && camera.camSetDistance < -2000) camera.gridZoom = 503 *2;
-            else if (camera.camSetDistance >= -2000 && camera.camSetDistance < -1000) camera.gridZoom = 201.2 *2;
-            else if (camera.camSetDistance >= -1000 && camera.camSetDistance < -500) camera.gridZoom = 100.6 *2;
-            else if (camera.camSetDistance >= -500 && camera.camSetDistance < -250) camera.gridZoom = 50.3 *2;
-            else if (camera.camSetDistance >= -250 && camera.camSetDistance < -150) camera.gridZoom = 25.15 *2;
-            else if (camera.camSetDistance >= -150 && camera.camSetDistance < -50) camera.gridZoom = 10.06 *2;
-            else if (camera.camSetDistance >= -50 && camera.camSetDistance < -1) camera.gridZoom = 5.03 *2;
+            else if (camera.camSetDistance >= -20000 && camera.camSetDistance < -10000) camera.gridZoom = 2012 * 2;
+            else if (camera.camSetDistance >= -10000 && camera.camSetDistance < -5000) camera.gridZoom = 1006 * 2;
+            else if (camera.camSetDistance >= -5000 && camera.camSetDistance < -2000) camera.gridZoom = 503 * 2;
+            else if (camera.camSetDistance >= -2000 && camera.camSetDistance < -1000) camera.gridZoom = 201.2 * 2;
+            else if (camera.camSetDistance >= -1000 && camera.camSetDistance < -500) camera.gridZoom = 100.6 * 2;
+            else if (camera.camSetDistance >= -500 && camera.camSetDistance < -250) camera.gridZoom = 50.3 * 2;
+            else if (camera.camSetDistance >= -250 && camera.camSetDistance < -150) camera.gridZoom = 25.15 * 2;
+            else if (camera.camSetDistance >= -150 && camera.camSetDistance < -50) camera.gridZoom = 10.06 * 2;
+            else if (camera.camSetDistance >= -50 && camera.camSetDistance < -1) camera.gridZoom = 5.03 * 2;
             //1.216 2.532
 
             oglMain.MakeCurrent();

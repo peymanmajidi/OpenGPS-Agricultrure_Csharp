@@ -455,7 +455,10 @@ namespace AgOpenGPS
         //Initialize items before the form Loads or is visible
         private void FormGPS_Load(object sender, EventArgs e)
         {
+            oglMain.Visible = oglBack.Visible = oglZoom.Visible = false;
+
             this.MouseWheel += ZoomByMouseWheel;
+            this.Refresh();
 
 
             if (Settings.Default.setF_workingDirectory == "Default")
@@ -515,6 +518,7 @@ namespace AgOpenGPS
             toolFileName = Vehicle.Default.setVehicle_toolName;
             envFileName = Vehicle.Default.setVehicle_envName;
 
+            this.Refresh();
 
             //get the abLines directory, if not exist, create
             ablinesDirectory = baseDirectory + "ABLines\\";
@@ -557,6 +561,7 @@ namespace AgOpenGPS
             //set the correct zoom and grid
             camera.camSetDistance = camera.zoomValue * camera.zoomValue * -1;
             SetZoom();
+            this.Refresh();
 
             //which heading source is being used
             headingFromSource = Settings.Default.setGPS_headingFromWhichSource;
@@ -581,6 +586,7 @@ namespace AgOpenGPS
                 isNTRIP_RequiredOn = false;
               
             }
+            this.Refresh();
 
             //remembered window position
             if (Settings.Default.setWindow_Maximized)
@@ -607,6 +613,7 @@ namespace AgOpenGPS
             //clear the flags
             flagPts.Clear();
             btnFlag.Enabled = false;
+
 
             //workswitch stuff
             mc.isWorkSwitchEnabled = Settings.Default.setF_IsWorkSwitchEnabled;
@@ -644,6 +651,8 @@ namespace AgOpenGPS
             hsbarStepDistance.Value = 30;
             hsbarStepDistance_Scroll(sender, null);
 
+            this.Refresh();
+            oglMain.Visible = oglBack.Visible = oglZoom.Visible = true;
 
         }
 
@@ -1189,6 +1198,11 @@ namespace AgOpenGPS
                         btnAutoSteer.Text = "M";
                 }
             }
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            JobNewOpenResume();
         }
 
         public void GetAB()

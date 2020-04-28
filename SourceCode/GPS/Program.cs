@@ -16,8 +16,7 @@ namespace AgOpenGPS
         [STAThread]
         private static void Main()
         {
-            if (Mutex.WaitOne(TimeSpan.Zero, true))
-            {
+
                 ////opening the subkey
                 RegistryKey regKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\AgOpenGPS");
 
@@ -49,11 +48,7 @@ namespace AgOpenGPS
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new FormGPS());
-            }
-            else
-            {
-                MessageBox.Show("Adaptive Agrotech is Already Running");
-            }
+
 
         }
 

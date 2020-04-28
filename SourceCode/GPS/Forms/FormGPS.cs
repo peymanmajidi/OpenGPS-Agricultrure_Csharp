@@ -704,7 +704,7 @@ namespace AgOpenGPS
             Settings.Default.setF_UserTripAlarm = fd.userSquareMetersAlarm;
 
             //Settings.Default.setDisplay_panelSnapLocation = panelSnap.Location;
-            Settings.Default.setDisplay_panelSimLocation = panelSim.Location;
+            //Settings.Default.setDisplay_panelSimLocation = panelSim.Location;
 
             Settings.Default.Save();
         }

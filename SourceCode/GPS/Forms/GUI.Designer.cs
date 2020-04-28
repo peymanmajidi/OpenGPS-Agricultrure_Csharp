@@ -441,8 +441,7 @@ namespace AgOpenGPS
                 panelBatman.Left = statusStripLeft.Width;
                 panelBatman.Visible = true;
 
-                panelSim.Left = 250;
-                panelSim.Width = Width - statusStripLeft.Width - panelBatman.Width - 325;
+               
 
                 if (panelDrag.Visible) panelDrag.Left = statusStripLeft.Width + panelBatman.Width + 5;
 
@@ -464,8 +463,7 @@ namespace AgOpenGPS
                 }
                 panelBatman.Visible = false;
                 
-                panelSim.Left = 100;
-                panelSim.Width = Width - statusStripLeft.Width - 350;
+
 
                 //if (isFullScreen) panelFieldData.Width += 20;
 
@@ -491,7 +489,7 @@ namespace AgOpenGPS
             }
 
             int top = 180;
-            if (panelSim.Visible == true) top = 230;
+      
 
             btnSection1Man.Top  = Height - top;
             btnSection2Man.Top  = Height - top;

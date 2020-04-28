@@ -1506,15 +1506,21 @@ namespace AgOpenGPS
         {
             if (panelDrag.Visible)
             {
-                offX = 0;
-                offY = 0;
+
                 panelDrag.Visible = false;
+
             }
             else
             {
-                panelDrag.Top = 80;
-                panelDrag.Left = 76;
+   
                 panelDrag.Visible = true;
+                if (panelBatman.Visible)
+                {
+                    panelDrag.Location = new Point(240, panelDrag.Location.Y);
+                }
+                else
+                    panelDrag.Location = new Point(120, panelDrag.Location.Y);
+
             }
         }
         private void ZoomExtentsStripBtn_Click(object sender, EventArgs e)

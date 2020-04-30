@@ -64,8 +64,12 @@
             this.nudSnapDistance = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.lblInchesCm = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.bntOK = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabConfig.SuspendLayout();
             this.gboxAttachment.SuspendLayout();
@@ -87,33 +91,36 @@
             this.groupBox9.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSnapDistance)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Right;
             this.tabControl1.Controls.Add(this.tabConfig);
             this.tabControl1.Controls.Add(this.tabSettings);
             this.tabControl1.Controls.Add(this.tabVehicle);
             this.tabControl1.Controls.Add(this.tabGuidance);
-            this.tabControl1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(200, 69);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(15, 162);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(978, 618);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.Size = new System.Drawing.Size(978, 528);
             this.tabControl1.TabIndex = 2;
             // 
             // tabConfig
             // 
             this.tabConfig.BackColor = System.Drawing.SystemColors.Control;
             this.tabConfig.Controls.Add(this.gboxAttachment);
-            this.tabConfig.Location = new System.Drawing.Point(4, 73);
+            this.tabConfig.Location = new System.Drawing.Point(4, 4);
+            this.tabConfig.Margin = new System.Windows.Forms.Padding(10, 3, 5, 3);
             this.tabConfig.Name = "tabConfig";
-            this.tabConfig.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConfig.Size = new System.Drawing.Size(970, 541);
+            this.tabConfig.Padding = new System.Windows.Forms.Padding(30);
+            this.tabConfig.Size = new System.Drawing.Size(901, 520);
             this.tabConfig.TabIndex = 14;
             this.tabConfig.Text = "Type";
             // 
@@ -125,7 +132,7 @@
             this.gboxAttachment.Controls.Add(this.rbtn4WD);
             this.gboxAttachment.Controls.Add(this.btnChangeAttachment);
             this.gboxAttachment.Controls.Add(this.rbtnTractor);
-            this.gboxAttachment.Location = new System.Drawing.Point(35, 38);
+            this.gboxAttachment.Location = new System.Drawing.Point(6, 16);
             this.gboxAttachment.Name = "gboxAttachment";
             this.gboxAttachment.Size = new System.Drawing.Size(871, 483);
             this.gboxAttachment.TabIndex = 111;
@@ -211,10 +218,10 @@
             this.tabSettings.Controls.Add(this.nudAntennaPivot);
             this.tabSettings.Controls.Add(this.label18);
             this.tabSettings.Controls.Add(this.nudAntennaOffset);
-            this.tabSettings.Location = new System.Drawing.Point(4, 73);
+            this.tabSettings.Location = new System.Drawing.Point(4, 4);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettings.Size = new System.Drawing.Size(970, 541);
+            this.tabSettings.Size = new System.Drawing.Size(901, 520);
             this.tabSettings.TabIndex = 11;
             this.tabSettings.Text = "Settings";
             // 
@@ -397,14 +404,14 @@
             this.tabVehicle.Controls.Add(this.nudMinTurnRadius);
             this.tabVehicle.Controls.Add(this.pictureBox1);
             this.tabVehicle.Controls.Add(this.label6);
-            this.tabVehicle.Location = new System.Drawing.Point(4, 73);
+            this.tabVehicle.Location = new System.Drawing.Point(4, 4);
             this.tabVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.tabVehicle.Name = "tabVehicle";
             this.tabVehicle.Padding = new System.Windows.Forms.Padding(4);
             this.tabVehicle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabVehicle.Size = new System.Drawing.Size(970, 541);
+            this.tabVehicle.Size = new System.Drawing.Size(901, 520);
             this.tabVehicle.TabIndex = 1;
-            this.tabVehicle.Text = "  Vehicle ";
+            this.tabVehicle.Text = "Vehicle";
             // 
             // groupBox3
             // 
@@ -498,18 +505,18 @@
             this.tabGuidance.Controls.Add(this.groupBox2);
             this.tabGuidance.Controls.Add(this.groupBox9);
             this.tabGuidance.Controls.Add(this.groupBox1);
-            this.tabGuidance.Location = new System.Drawing.Point(4, 73);
+            this.tabGuidance.Location = new System.Drawing.Point(4, 4);
             this.tabGuidance.Name = "tabGuidance";
             this.tabGuidance.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGuidance.Size = new System.Drawing.Size(970, 541);
+            this.tabGuidance.Size = new System.Drawing.Size(901, 520);
             this.tabGuidance.TabIndex = 13;
-            this.tabGuidance.Text = " Guidance ";
+            this.tabGuidance.Text = "Guidance";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.nudLineWidth);
             this.groupBox4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(714, 59);
+            this.groupBox4.Location = new System.Drawing.Point(48, 248);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(232, 172);
             this.groupBox4.TabIndex = 124;
@@ -586,7 +593,7 @@
             // 
             this.groupBox9.Controls.Add(this.cboxAutoSteerAuto);
             this.groupBox9.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(714, 288);
+            this.groupBox9.Location = new System.Drawing.Point(394, 248);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(232, 192);
             this.groupBox9.TabIndex = 92;
@@ -647,41 +654,25 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(23, 622);
+            this.label17.Location = new System.Drawing.Point(29, 697);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(153, 23);
+            this.label17.Size = new System.Drawing.Size(157, 25);
             this.label17.TabIndex = 89;
             this.label17.Text = "Measurements in";
             // 
             // lblInchesCm
             // 
             this.lblInchesCm.AutoSize = true;
-            this.lblInchesCm.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.lblInchesCm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInchesCm.ForeColor = System.Drawing.Color.Red;
             this.lblInchesCm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblInchesCm.Location = new System.Drawing.Point(65, 653);
+            this.lblInchesCm.Location = new System.Drawing.Point(192, 697);
             this.lblInchesCm.Name = "lblInchesCm";
-            this.lblInchesCm.Size = new System.Drawing.Size(111, 39);
+            this.lblInchesCm.Size = new System.Drawing.Size(66, 25);
             this.lblInchesCm.TabIndex = 109;
             this.lblInchesCm.Text = "Inches";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.btnCancel.Image = global::AgOpenGPS.Properties.Resources.Cancel64;
-            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(687, 626);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(88, 68);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // bntOK
             // 
@@ -690,28 +681,95 @@
             this.bntOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntOK.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.bntOK.Image = global::AgOpenGPS.Properties.Resources.OK64;
+            this.bntOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntOK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bntOK.Location = new System.Drawing.Point(820, 626);
+            this.bntOK.Location = new System.Drawing.Point(594, 697);
             this.bntOK.Name = "bntOK";
-            this.bntOK.Size = new System.Drawing.Size(156, 68);
+            this.bntOK.Size = new System.Drawing.Size(325, 63);
             this.bntOK.TabIndex = 0;
-            this.bntOK.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.bntOK.Text = "Save Changes          ";
+            this.bntOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bntOK.UseVisualStyleBackColor = false;
             this.bntOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1014, 155);
+            this.panel1.TabIndex = 110;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-52, -461);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1182, 815);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 91;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnCancel.Image = global::AgOpenGPS.Properties.Resources.Cancel64;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancel.Location = new System.Drawing.Point(356, 697);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(232, 63);
+            this.btnCancel.TabIndex = 111;
+            this.btnCancel.Text = "Cancel         ";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(19, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(276, 89);
+            this.label1.TabIndex = 92;
+            this.label1.Text = "Settings";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(34, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 14);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "Vehicle Settings && Guidance";
+            // 
             // FormSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(987, 700);
+            this.ClientSize = new System.Drawing.Size(1014, 771);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblInchesCm);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.bntOK);
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -744,6 +802,9 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudSnapDistance)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,7 +815,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabVehicle;
         private System.Windows.Forms.Button bntOK;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.NumericUpDown nudAntennaHeight;
         private System.Windows.Forms.NumericUpDown nudAntennaPivot;
         private System.Windows.Forms.NumericUpDown nudWheelbase;
@@ -788,5 +848,10 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.NumericUpDown nudHydLiftSecs;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -688,7 +688,7 @@ namespace AgOpenGPS
             hsbarStepDistance.Value = 30;
             hsbarStepDistance_Scroll(sender, null);
             panelSim.Visible = false;
-
+          
             this.Refresh();
             new Thread(() =>
             {

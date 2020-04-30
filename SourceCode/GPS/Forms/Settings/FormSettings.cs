@@ -350,6 +350,12 @@ namespace AgOpenGPS
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
         private void rbtn4WD_CheckedChanged(object sender, EventArgs e)
         {
             var radioButton = sender as RadioButton;

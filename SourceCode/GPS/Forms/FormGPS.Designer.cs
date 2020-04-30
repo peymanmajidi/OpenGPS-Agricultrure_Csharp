@@ -2657,9 +2657,10 @@
             // 
             this.toolStripStatusLabel3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Padding = new System.Windows.Forms.Padding(8, 10, 0, 0);
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(83, 30);
+            this.toolStripStatusLabel3.Padding = new System.Windows.Forms.Padding(8, 30, 0, 0);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(83, 50);
             this.toolStripStatusLabel3.Text = "MACHINE";
+            this.toolStripStatusLabel3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // pbarMachineComm
             // 
@@ -2709,6 +2710,7 @@
             this.dNorthToolStripMenuItem});
             this.cameraDropDown.Image = ((System.Drawing.Image)(resources.GetObject("cameraDropDown.Image")));
             this.cameraDropDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cameraDropDown.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.cameraDropDown.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.cameraDropDown.Name = "cameraDropDown";
             this.cameraDropDown.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -2754,7 +2756,7 @@
             this.toolStripBtnDrag.DropDownButtonWidth = 0;
             this.toolStripBtnDrag.Image = global::AgOpenGPS.Properties.Resources.arror;
             this.toolStripBtnDrag.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDrag.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.toolStripBtnDrag.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.toolStripBtnDrag.Name = "toolStripBtnDrag";
             this.toolStripBtnDrag.Size = new System.Drawing.Size(65, 55);
             this.toolStripBtnDrag.ButtonClick += new System.EventHandler(this.toolStripBtnDrag_ButtonClick);
@@ -2765,6 +2767,7 @@
             this.distanceToolBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.distanceToolBtn.Image = ((System.Drawing.Image)(resources.GetObject("distanceToolBtn.Image")));
             this.distanceToolBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.distanceToolBtn.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.distanceToolBtn.Name = "distanceToolBtn";
             this.distanceToolBtn.ShowDropDownArrow = false;
             this.distanceToolBtn.Size = new System.Drawing.Size(68, 23);
@@ -2789,6 +2792,7 @@
             // stripSectionColor
             // 
             this.stripSectionColor.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stripSectionColor.Margin = new System.Windows.Forms.Padding(0, 15, 0, 2);
             this.stripSectionColor.Name = "stripSectionColor";
             this.stripSectionColor.Size = new System.Drawing.Size(72, 25);
             this.stripSectionColor.Text = "COLOR";

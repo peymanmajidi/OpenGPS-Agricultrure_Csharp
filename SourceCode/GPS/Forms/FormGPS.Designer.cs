@@ -1423,7 +1423,7 @@
             this.panelDrag.Controls.Add(this.btnpTiltUp, 0, 5);
             this.panelDrag.Controls.Add(this.btnMoveUp, 0, 0);
             this.panelDrag.Controls.Add(this.btnMoveDown, 0, 1);
-            this.panelDrag.Location = new System.Drawing.Point(116, 102);
+            this.panelDrag.Location = new System.Drawing.Point(116, 99);
             this.panelDrag.Name = "panelDrag";
             this.panelDrag.RowCount = 7;
             this.panelDrag.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.60544F));
@@ -1860,7 +1860,7 @@
             this.oglMain.Location = new System.Drawing.Point(106, 4);
             this.oglMain.Margin = new System.Windows.Forms.Padding(0);
             this.oglMain.Name = "oglMain";
-            this.oglMain.Size = new System.Drawing.Size(1275, 597);
+            this.oglMain.Size = new System.Drawing.Size(1275, 591);
             this.oglMain.TabIndex = 180;
             this.oglMain.VSync = false;
             this.oglMain.Load += new System.EventHandler(this.oglMain_Load);
@@ -2132,7 +2132,7 @@
             this.toolStripDropDownButton2});
             this.statusStripBottom.Location = new System.Drawing.Point(3, 3);
             this.statusStripBottom.Name = "statusStripBottom";
-            this.statusStripBottom.Size = new System.Drawing.Size(1161, 66);
+            this.statusStripBottom.Size = new System.Drawing.Size(1161, 72);
             this.statusStripBottom.SizingGrip = false;
             this.statusStripBottom.TabIndex = 323;
             // 
@@ -2569,7 +2569,7 @@
             this.statusStripLeft.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.statusStripLeft.Name = "statusStripLeft";
             this.statusStripLeft.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStripLeft.Size = new System.Drawing.Size(102, 621);
+            this.statusStripLeft.Size = new System.Drawing.Size(102, 615);
             this.statusStripLeft.SizingGrip = false;
             this.statusStripLeft.Stretch = false;
             this.statusStripLeft.TabIndex = 324;
@@ -2804,7 +2804,7 @@
             this.panelSim.Controls.Add(this.hsbarStepDistance, 1, 0);
             this.panelSim.Controls.Add(this.btnSimSetSpeedToZero, 2, 0);
             this.panelSim.Controls.Add(this.btnResetSim, 5, 0);
-            this.panelSim.Location = new System.Drawing.Point(339, 543);
+            this.panelSim.Location = new System.Drawing.Point(339, 537);
             this.panelSim.Name = "panelSim";
             this.panelSim.RowCount = 1;
             this.panelSim.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2873,7 +2873,7 @@
             this.panelFieldData.Controls.Add(this.lblTimeRemaining, 6, 0);
             this.panelFieldData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFieldData.ForeColor = System.Drawing.Color.White;
-            this.panelFieldData.Location = new System.Drawing.Point(102, 599);
+            this.panelFieldData.Location = new System.Drawing.Point(102, 593);
             this.panelFieldData.Name = "panelFieldData";
             this.panelFieldData.RowCount = 1;
             this.panelFieldData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -3126,9 +3126,9 @@
             this.panelMain.Controls.Add(this.oglZoom);
             this.panelMain.Controls.Add(this.oglBack);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 221);
+            this.panelMain.Location = new System.Drawing.Point(0, 227);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1381, 621);
+            this.panelMain.Size = new System.Drawing.Size(1381, 615);
             this.panelMain.TabIndex = 453;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -3138,7 +3138,7 @@
             this.lblPlzWait.AutoSize = true;
             this.lblPlzWait.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlzWait.ForeColor = System.Drawing.Color.White;
-            this.lblPlzWait.Location = new System.Drawing.Point(696, 471);
+            this.lblPlzWait.Location = new System.Drawing.Point(696, 465);
             this.lblPlzWait.Name = "lblPlzWait";
             this.lblPlzWait.Size = new System.Drawing.Size(148, 24);
             this.lblPlzWait.TabIndex = 453;
@@ -3152,7 +3152,7 @@
             this.picLoading.Location = new System.Drawing.Point(102, 0);
             this.picLoading.Name = "picLoading";
             this.picLoading.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.picLoading.Size = new System.Drawing.Size(1279, 599);
+            this.picLoading.Size = new System.Drawing.Size(1279, 593);
             this.picLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picLoading.TabIndex = 452;
             this.picLoading.TabStop = false;
@@ -3195,7 +3195,7 @@
             this.btnFullScreen.FlatAppearance.BorderSize = 0;
             this.btnFullScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFullScreen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFullScreen.Location = new System.Drawing.Point(1180, 30);
+            this.btnFullScreen.Location = new System.Drawing.Point(1180, 28);
             this.btnFullScreen.Name = "btnFullScreen";
             this.btnFullScreen.Size = new System.Drawing.Size(72, 57);
             this.btnFullScreen.TabIndex = 250;
@@ -3209,12 +3209,12 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 111);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1381, 110);
+            this.tabControl1.Size = new System.Drawing.Size(1381, 116);
             this.tabControl1.TabIndex = 455;
             // 
             // tabPage1
@@ -3225,7 +3225,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1373, 72);
+            this.tabPage1.Size = new System.Drawing.Size(1373, 78);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "      HOME      ";
             // 
@@ -3236,7 +3236,7 @@
             this.lblDateTime.Font = new System.Drawing.Font("DS-Digital", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateTime.Location = new System.Drawing.Point(1164, 3);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(206, 66);
+            this.lblDateTime.Size = new System.Drawing.Size(206, 72);
             this.lblDateTime.TabIndex = 324;
             this.lblDateTime.Text = "00:00:00";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

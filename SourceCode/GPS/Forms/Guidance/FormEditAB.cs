@@ -36,7 +36,7 @@ namespace AgOpenGPS
             tboxHeading.Text = Math.Round(glm.toDegrees(mf.ABLine.abHeading), 3).ToString("N3");
             btnCancel.Focus();
             mf.ABLine.isEditing = true;
-            mf.layoutPanelRight.Enabled = true;
+          
             label3.Text = "\u00BD";
         }
 
@@ -86,7 +86,7 @@ namespace AgOpenGPS
             mf.FileSaveABLines();
             mf.ABLine.moveDistance = 0;
 
-            mf.layoutPanelRight.Enabled = true;
+          
             Close();
         }
 
@@ -104,7 +104,7 @@ namespace AgOpenGPS
             mf.ABLine.isABLineLoaded = true;
             mf.ABLine.moveDistance = 0;
 
-            mf.layoutPanelRight.Enabled = true;
+       
             Close();
         }
 

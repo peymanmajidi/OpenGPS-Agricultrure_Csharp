@@ -73,7 +73,7 @@ namespace AgOpenGPS
             //mf.ABLine.tramBasedOn = Properties.Vehicle.Default.setTram_BasedOn;
 
             mf.ABLine.isEditing = true;
-            mf.layoutPanelRight.Enabled = false;
+           
 
             //if off, turn it on because they obviously want a tram.
             if (mf.tram.displayMode == 0) mf.tram.displayMode = 1;
@@ -120,7 +120,7 @@ namespace AgOpenGPS
 
             mf.ABLine.moveDistance = 0;
             mf.ABLine.isEditing = false;
-            mf.layoutPanelRight.Enabled = true;
+       
             mf.panelDrag.Visible = false;
             mf.offX = 0;
             mf.offY = 0;
@@ -234,7 +234,7 @@ namespace AgOpenGPS
             //mf.ABLine.tramPassEvery = 0;
             //mf.ABLine.tramBasedOn = 0;
             mf.ABLine.isEditing = false;
-            mf.layoutPanelRight.Enabled = true;
+         
             mf.panelDrag.Visible = false;
             mf.offX = 0;
             mf.offY = 0;

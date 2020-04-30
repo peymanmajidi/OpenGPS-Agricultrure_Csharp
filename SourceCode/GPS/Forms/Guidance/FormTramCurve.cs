@@ -61,7 +61,7 @@ namespace AgOpenGPS
 
             mf.curve.BuildTram();
             mf.curve.isEditing = true;
-            mf.layoutPanelRight.Enabled = false;
+           
 
             if (mf.tram.displayMode == 0) mf.tram.displayMode = 1;
             switch (mf.tram.displayMode)
@@ -88,7 +88,7 @@ namespace AgOpenGPS
         {
             //mf.ABLine.moveDistance = 0;
             mf.curve.isEditing = false;
-            mf.layoutPanelRight.Enabled = true;
+          
             mf.panelDrag.Visible = false;
 
             mf.offX = 0;
@@ -226,7 +226,7 @@ namespace AgOpenGPS
             mf.tram.tramBndArr?.Clear();
 
             mf.curve.isEditing = false;
-            mf.layoutPanelRight.Enabled = true;
+           
             mf.panelDrag.Visible = false;
             mf.offX = 0;
             mf.offY = 0;

@@ -40,7 +40,7 @@ namespace AgOpenGPS
 
             btnCancel.Focus();
             mf.curve.isEditing = true;
-            mf.layoutPanelRight.Enabled = false;
+         
         }
 
         private void nudMinTurnRadius_Enter(object sender, EventArgs e)
@@ -88,7 +88,6 @@ namespace AgOpenGPS
                 mf.FileSaveCurveLines();
                 mf.curve.moveDistance = 0;
 
-                mf.layoutPanelRight.Enabled = true;
                 Close();
             }
         }
@@ -111,7 +110,7 @@ namespace AgOpenGPS
                 }
                 mf.curve.isCurveSet = true;
             }
-            mf.layoutPanelRight.Enabled = true;
+         
 
             Close();
         }

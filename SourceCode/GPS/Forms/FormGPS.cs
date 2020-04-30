@@ -1304,6 +1304,11 @@ namespace AgOpenGPS
             SetZoom();
         }
 
+        private void toolStripDropDownButton5_Click(object sender, EventArgs e)
+        {
+            SwapDayNightMode();
+        }
+
         public void GetAB()
         {
             curve.isOkToAddPoints = false;

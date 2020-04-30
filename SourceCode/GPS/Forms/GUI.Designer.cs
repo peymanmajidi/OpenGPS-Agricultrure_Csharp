@@ -284,12 +284,12 @@ namespace AgOpenGPS
         private void NightMode()
         {
             btnDayNightMode.Image = Properties.Resources.WindowDayMode;
-            this.BackColor = nightColor;
+           // this.BackColor = nightColor;
 
             foreach (Control c in this.Controls)
             {
                 {
-                    c.ForeColor = Color.White;
+                    c.ForeColor = Color.Black;
                 }
             }
             LineUpManualBtns();

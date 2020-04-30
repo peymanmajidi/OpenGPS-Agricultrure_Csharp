@@ -683,6 +683,8 @@ namespace AgOpenGPS
             isJRK = Properties.Settings.Default.setAS_isJRK;
 
             isRTK = Properties.Settings.Default.setGPS_isRTK;
+            toolStripDropDownButton5_Click(sender, e);
+            toolStripDropDownButton5_Click(sender, e);
             hsbarStepDistance.Value = 30;
             hsbarStepDistance_Scroll(sender, null);
             panelSim.Visible = false;

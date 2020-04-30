@@ -40,7 +40,7 @@ namespace AgOpenGPS
         public btnStates manualBtnState = btnStates.Off;
         public btnStates autoBtnState = btnStates.Off;
 
-        public Color dayColor = Properties.Settings.Default.setDisplay_colorDayMode;
+        public Color dayColor = Color.WhiteSmoke;
         public Color nightColor = Properties.Settings.Default.setDisplay_colorNightMode;
         public Color sectionColorDay = Properties.Settings.Default.setDisplay_colorSectionsDay;
         public Color sectionColorNight = Properties.Settings.Default.setDisplay_colorSectionsNight;

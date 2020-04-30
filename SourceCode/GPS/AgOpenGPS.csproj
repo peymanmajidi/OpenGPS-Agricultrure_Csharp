@@ -824,6 +824,12 @@
     <Content Include="AppIcon64.ico" />
     <Content Include="aChangeLog.txt" />
     <Content Include="logo.ico" />
+    <None Include="Resources\arror1.png" />
+    <None Include="Resources\3d1.png" />
+    <None Include="Resources\robot1.png" />
+    <None Include="Resources\forward1.png" />
+    <None Include="Resources\agt_back-2562.png" />
+    <None Include="Resources\agt_back-2561.png" />
     <None Include="Resources\tractor-icon.png" />
     <None Include="Resources\op01.png" />
     <None Include="Resources\opnew.png" />

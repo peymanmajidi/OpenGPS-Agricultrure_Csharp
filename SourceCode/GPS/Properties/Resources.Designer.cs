@@ -1072,6 +1072,16 @@ namespace AgOpenGPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lego {
+            get {
+                object obj = ResourceManager.GetObject("lego", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LetterABlue {
             get {
                 object obj = ResourceManager.GetObject("LetterABlue", resourceCulture);
@@ -1252,9 +1262,29 @@ namespace AgOpenGPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap qw {
+            get {
+                object obj = ResourceManager.GetObject("qw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap radar_icon {
             get {
                 object obj = ResourceManager.GetObject("radar-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rake {
+            get {
+                object obj = ResourceManager.GetObject("rake", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1665,6 +1695,16 @@ namespace AgOpenGPS.Properties {
         internal static System.Drawing.Bitmap TripOdometer {
             get {
                 object obj = ResourceManager.GetObject("TripOdometer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ttt {
+            get {
+                object obj = ResourceManager.GetObject("ttt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

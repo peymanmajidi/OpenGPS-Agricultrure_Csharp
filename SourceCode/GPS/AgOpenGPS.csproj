@@ -824,6 +824,10 @@
     <Content Include="AppIcon64.ico" />
     <Content Include="aChangeLog.txt" />
     <Content Include="logo.ico" />
+    <None Include="Resources\lego.png" />
+    <None Include="Resources\rake.png" />
+    <None Include="Resources\qw.png" />
+    <None Include="Resources\ttt.png" />
     <None Include="Resources\arror1.png" />
     <None Include="Resources\3d1.png" />
     <None Include="Resources\robot1.png" />

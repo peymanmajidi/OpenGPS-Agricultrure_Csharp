@@ -468,7 +468,8 @@ namespace AgOpenGPS
         private void FormGPS_Load(object sender, EventArgs e)
         {
             oglMain.Visible = oglBack.Visible = oglZoom.Visible = false;
-
+            panelSim.Visible = false;
+            
             this.MouseWheel += ZoomByMouseWheel;
             this.Refresh();
 
@@ -542,8 +543,10 @@ namespace AgOpenGPS
             vehicleFileName = Vehicle.Default.setVehicle_vehicleName;
             toolFileName = Vehicle.Default.setVehicle_toolName;
             envFileName = Vehicle.Default.setVehicle_envName;
+            panelSim.Visible = false;
 
             this.Refresh();
+ 
 
             //get the abLines directory, if not exist, create
             ablinesDirectory = baseDirectory + "ABLines\\";
@@ -691,12 +694,12 @@ namespace AgOpenGPS
                 lblPlzWait.Visible = picLoading.Visible = false;
 
                 oglMain.Visible = true;
-                Thread.Sleep(1000);
+
 
 
                 oglBack.Visible = true;
                 oglZoom.Visible = true;
-                Thread.Sleep(1000);
+                Thread.Sleep(1500);
 
                 panelSim.Visible = true;
                 
@@ -1256,6 +1259,21 @@ namespace AgOpenGPS
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             JobNewOpenResume();
+        }
+
+        private void stripSectionColor_Click(object sender, EventArgs e)
+        {
+            StripClick(null, null);
+        }
+
+        private void btnZoomOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnZoomIn_Click(object sender, EventArgs e)
+        {
+
         }
 
         public void GetAB()

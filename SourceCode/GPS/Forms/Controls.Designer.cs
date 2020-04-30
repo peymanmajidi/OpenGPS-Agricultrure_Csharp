@@ -1942,7 +1942,7 @@ namespace AgOpenGPS
         }
 
         //sections Day
-        private void stripSectionColor_Click(object sender, EventArgs e)
+        private void StripClick(object sender, EventArgs e)
         {
             ColorDialog colorDlg = new ColorDialog
             {

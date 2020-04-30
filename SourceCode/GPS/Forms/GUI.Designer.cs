@@ -1325,7 +1325,8 @@ namespace AgOpenGPS
                     //    toolStripBtnGPSStength.Image = Resources.GPSSignalGood;
                     //}
 
-                    lblDateTime.Text = DateTime.Now.ToString("HH:mm:ss") + "\n\r" + DateTime.Now.ToString("ddd MMM yyyy");
+                    lblDateTime.Text = DateTime.Now.ToString("HH:mm:ss"); 
+                    ;
                 }//end every 3 seconds
 
                 //every second update all status ///////////////////////////   1 1 1 1 1 1 ////////////////////////////

@@ -824,6 +824,16 @@
     <Content Include="AppIcon64.ico" />
     <Content Include="aChangeLog.txt" />
     <Content Include="logo.ico" />
+    <None Include="Resources\Start-Menu-Search-icon.png" />
+    <None Include="Resources\17998375811574330942-512.png" />
+    <None Include="Resources\settings-icon.png" />
+    <None Include="Resources\interface.png" />
+    <None Include="Resources\settings %281%29.png" />
+    <None Include="Resources\kitchen-utensils.png" />
+    <None Include="Resources\protection.png" />
+    <None Include="Resources\riggght.png" />
+    <None Include="Resources\lego2.png" />
+    <None Include="Resources\unnamed.png" />
     <None Include="Resources\lego.png" />
     <None Include="Resources\rake.png" />
     <None Include="Resources\qw.png" />

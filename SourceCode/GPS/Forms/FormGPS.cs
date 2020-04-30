@@ -1276,6 +1276,34 @@ namespace AgOpenGPS
 
         }
 
+        private void toolStripDropDownButton3_Click(object sender, EventArgs e)
+        {
+            if (camera.zoomValue <= 20)
+            {
+                if ((camera.zoomValue -= camera.zoomValue * 0.1) < 6.0)
+                    camera.zoomValue = 6.0;
+            }
+            else
+            {
+                if ((camera.zoomValue -= camera.zoomValue * 0.05) < 6.0)
+                    camera.zoomValue = 6.0;
+            }
+            camera.camSetDistance = camera.zoomValue * camera.zoomValue * -1;
+            SetZoom();
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+            if (camera.zoomValue <= 20)
+                camera.zoomValue += camera.zoomValue * 0.1;
+            else
+                camera.zoomValue += camera.zoomValue * 0.05;
+            if (camera.zoomValue > 220)
+                camera.zoomValue = 220;
+            camera.camSetDistance = camera.zoomValue * camera.zoomValue * -1;
+            SetZoom();
+        }
+
         public void GetAB()
         {
             curve.isOkToAddPoints = false;

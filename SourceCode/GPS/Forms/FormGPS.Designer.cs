@@ -1255,8 +1255,8 @@
             // 
             this.toolStripStatusLabel3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(83, 20);
+            this.toolStripStatusLabel3.Padding = new System.Windows.Forms.Padding(8, 10, 0, 0);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(83, 30);
             this.toolStripStatusLabel3.Text = "MACHINE";
             // 
             // pbarMachineComm
@@ -1625,11 +1625,11 @@
             // 
             // lblDateTime
             // 
-            this.lblDateTime.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDateTime.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTime.Location = new System.Drawing.Point(1128, -14);
+            this.lblDateTime.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblDateTime.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTime.Location = new System.Drawing.Point(1128, 3);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(200, 67);
+            this.lblDateTime.Size = new System.Drawing.Size(200, 70);
             this.lblDateTime.TabIndex = 324;
             this.lblDateTime.Text = "00:00:00\r\nLoading ...";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

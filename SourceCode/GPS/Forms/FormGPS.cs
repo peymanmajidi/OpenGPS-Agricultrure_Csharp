@@ -360,7 +360,8 @@ namespace AgOpenGPS
             //create a new section and set left and right positions
             //created whether used or not, saves restarting program
             section = new CSection[MAXSECTIONS];
-            for (int j = 0; j < MAXSECTIONS; j++) section[j] = new CSection(this);
+            for (int j = 0; j < MAXSECTIONS; j++)
+                section[j] = new CSection(this);
 
             //our NMEA parser
             pn = new CNMEA(this);
@@ -436,17 +437,27 @@ namespace AgOpenGPS
         {
             if (e.Delta > 0)
             {
-                if (camera.zoomValue <= 20) camera.zoomValue += camera.zoomValue * 0.02;
-                else camera.zoomValue += camera.zoomValue * 0.01;
-                if (camera.zoomValue > 120) camera.zoomValue = 120;
+                if (camera.zoomValue <= 20)
+                    camera.zoomValue += camera.zoomValue * 0.02;
+                else
+                    camera.zoomValue += camera.zoomValue * 0.01;
+                if (camera.zoomValue > 120)
+                    camera.zoomValue = 120;
                 camera.camSetDistance = camera.zoomValue * camera.zoomValue * -1;
                 SetZoom();
             }
             else
             {
                 if (camera.zoomValue <= 20)
-                { if ((camera.zoomValue -= camera.zoomValue * 0.02) < 6.0) camera.zoomValue = 6.0; }
-                else { if ((camera.zoomValue -= camera.zoomValue * 0.01) < 6.0) camera.zoomValue = 6.0; }
+                {
+                    if ((camera.zoomValue -= camera.zoomValue * 0.02) < 6.0)
+                        camera.zoomValue = 6.0;
+                }
+                else
+                {
+                    if ((camera.zoomValue -= camera.zoomValue * 0.01) < 6.0)
+                        camera.zoomValue = 6.0;
+                }
 
                 camera.camSetDistance = camera.zoomValue * camera.zoomValue * -1;
                 SetZoom();
@@ -464,27 +475,40 @@ namespace AgOpenGPS
 
             if (Settings.Default.setF_workingDirectory == "Default")
                 baseDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\AgOpenGPS\\";
-            else baseDirectory = Settings.Default.setF_workingDirectory + "\\AgOpenGPS\\";
+            else
+                baseDirectory = Settings.Default.setF_workingDirectory + "\\AgOpenGPS\\";
 
             //get the fields directory, if not exist, create
             fieldsDirectory = baseDirectory + "Fields\\";
             string dir = Path.GetDirectoryName(fieldsDirectory);
-            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir)) { Directory.CreateDirectory(dir); }
+            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
 
             //get the fields directory, if not exist, create
             vehiclesDirectory = baseDirectory + "Vehicles\\";
             dir = Path.GetDirectoryName(vehiclesDirectory);
-            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir)) { Directory.CreateDirectory(dir); }
+            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
 
             //get the tools directory, if not exist, create
             toolsDirectory = baseDirectory + "Tools\\";
             dir = Path.GetDirectoryName(toolsDirectory);
-            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir)) { Directory.CreateDirectory(dir); }
+            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
 
             //get the tools directory, if not exist, create
             envDirectory = baseDirectory + "Environments\\";
             dir = Path.GetDirectoryName(envDirectory);
-            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir)) { Directory.CreateDirectory(dir); }
+            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
 
 
             //make sure current field directory exists, null if not
@@ -524,7 +548,10 @@ namespace AgOpenGPS
             //get the abLines directory, if not exist, create
             ablinesDirectory = baseDirectory + "ABLines\\";
             dir = Path.GetDirectoryName(fieldsDirectory);
-            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir)) { Directory.CreateDirectory(dir); }
+            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
 
             //set baud and port from last time run
             baudRateGPS = Settings.Default.setPort_baudRate;
@@ -546,12 +573,14 @@ namespace AgOpenGPS
             //same for SectionMachine port
             portNameMachine = Settings.Default.setPort_portNameMachine;
             wasRateMachineConnectedLastRun = Settings.Default.setPort_wasMachineConnected;
-            if (wasRateMachineConnectedLastRun) SerialPortMachineOpen();
+            if (wasRateMachineConnectedLastRun)
+                SerialPortMachineOpen();
 
             //same for AutoSteer port
             portNameAutoSteer = Settings.Default.setPort_portNameAutoSteer;
             wasAutoSteerConnectedLastRun = Settings.Default.setPort_wasAutoSteerConnected;
-            if (wasAutoSteerConnectedLastRun) SerialPortAutoSteerOpen();
+            if (wasAutoSteerConnectedLastRun)
+                SerialPortAutoSteerOpen();
 
             //Set width of section and positions for each section
             SectionSetPosition();
@@ -572,9 +601,11 @@ namespace AgOpenGPS
 
             //start udp server if required
             if (Properties.Settings.Default.setUDP_isOn
-                && !Properties.Settings.Default.setUDP_isInterAppOn) StartUDPServer();
+                && !Properties.Settings.Default.setUDP_isInterAppOn)
+                StartUDPServer();
 
-            if (Properties.Settings.Default.setUDP_isInterAppOn) StartLocalUDPServer();
+            if (Properties.Settings.Default.setUDP_isInterAppOn)
+                StartLocalUDPServer();
 
             //start NTRIP if required
             if (Properties.Settings.Default.setNTRIP_isOn)
@@ -651,13 +682,24 @@ namespace AgOpenGPS
             isRTK = Properties.Settings.Default.setGPS_isRTK;
             hsbarStepDistance.Value = 30;
             hsbarStepDistance_Scroll(sender, null);
+            panelSim.Visible = false;
 
             this.Refresh();
             new Thread(() =>
             {
-                Thread.Sleep(3000);
-                picLoading.Visible = false;
-                oglMain.Visible = oglBack.Visible = oglZoom.Visible = true;
+                Thread.Sleep(2500);
+                lblPlzWait.Visible = picLoading.Visible = false;
+
+                oglMain.Visible = true;
+                Thread.Sleep(1000);
+
+
+                oglBack.Visible = true;
+                oglZoom.Visible = true;
+                Thread.Sleep(1000);
+
+                panelSim.Visible = true;
+                
 
             }).Start();
         }
@@ -799,7 +841,8 @@ namespace AgOpenGPS
                         GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, 9729);
                         GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, 9729);
 
-                        font.textureWidth = bitmap.Width; font.textureHeight = bitmap.Height;
+                        font.textureWidth = bitmap.Width;
+                        font.textureHeight = bitmap.Height;
                     }
                 }
             }
@@ -1127,7 +1170,8 @@ namespace AgOpenGPS
             }
             else
             {
-                if (yt.isYouTurnBtnOn) btnAutoYouTurn.PerformClick();
+                if (yt.isYouTurnBtnOn)
+                    btnAutoYouTurn.PerformClick();
             }
         }
 
@@ -1138,9 +1182,12 @@ namespace AgOpenGPS
             {
                 var result = form.ShowDialog();
 
-                if (result == DialogResult.OK) return 0;      //Save and Exit
-                if (result == DialogResult.Ignore) return 1;   //Ignore
-                if (result == DialogResult.Yes) return 2;      //Save As
+                if (result == DialogResult.OK)
+                    return 0;      //Save and Exit
+                if (result == DialogResult.Ignore)
+                    return 1;   //Ignore
+                if (result == DialogResult.Yes)
+                    return 2;      //Save As
                 return 3;  // oops something is really busted
             }
         }
@@ -1215,7 +1262,11 @@ namespace AgOpenGPS
         {
             curve.isOkToAddPoints = false;
 
-            if (ct.isContourBtnOn) { if (ct.isContourBtnOn) btnContour.PerformClick(); }
+            if (ct.isContourBtnOn)
+            {
+                if (ct.isContourBtnOn)
+                    btnContour.PerformClick();
+            }
 
             using (var form = new FormABDraw(this))
             {
@@ -1227,8 +1278,10 @@ namespace AgOpenGPS
                 curve.moveDistance = 0;
             }
 
-            if (curve.isBtnCurveOn) btnCycleLines.Text = "Cu-" + curve.numCurveLineSelected;
-            if (ABLine.isBtnABLineOn) btnCycleLines.Text = "AB-" + ABLine.numABLineSelected;
+            if (curve.isBtnCurveOn)
+                btnCycleLines.Text = "Cu-" + curve.numCurveLineSelected;
+            if (ABLine.isBtnABLineOn)
+                btnCycleLines.Text = "AB-" + ABLine.numABLineSelected;
         }
 
         public void KeypadToNUD(NumericUpDown sender)
@@ -1679,7 +1732,9 @@ namespace AgOpenGPS
                     {
                         //ask for a directory name
                         using (var form2 = new FormFieldDir(this))
-                        { form2.ShowDialog(); }
+                        {
+                            form2.ShowDialog();
+                        }
                     }
                 }
 
@@ -1754,13 +1809,16 @@ namespace AgOpenGPS
                     if (section[j].sectionOnRequest)
                         section[j].isSectionOn = true;
 
-                    if (!section[j].sectionOffRequest) section[j].sectionOffTimer = (int)((double)fixUpdateHz * tool.turnOffDelay);
+                    if (!section[j].sectionOffRequest)
+                        section[j].sectionOffTimer = (int)((double)fixUpdateHz * tool.turnOffDelay);
 
-                    if (section[j].sectionOffTimer > 0) section[j].sectionOffTimer--;
+                    if (section[j].sectionOffTimer > 0)
+                        section[j].sectionOffTimer--;
 
                     if (section[j].sectionOffRequest & section[j].sectionOffTimer == 0)
                     {
-                        if (section[j].isSectionOn) section[j].isSectionOn = false;
+                        if (section[j].isSectionOn)
+                            section[j].isSectionOn = false;
                     }
 
                     //MAPPING - 
@@ -1768,24 +1826,28 @@ namespace AgOpenGPS
                     //easy just turn it on
                     if (section[j].mappingOnRequest)
                     {
-                        if (!section[j].isMappingOn && isMapping) section[j].TurnMappingOn(); //**************************************** un comment to enable mappping again
+                        if (!section[j].isMappingOn && isMapping)
+                            section[j].TurnMappingOn(); //**************************************** un comment to enable mappping again
                     }
 
                     //turn off
                     double sped = 1 / ((pn.speed + 5) * 0.2);
-                    if (sped < 0.2) sped = 0.2;
+                    if (sped < 0.2)
+                        sped = 0.2;
 
                     //keep setting the timer so full when ready to turn off
                     if (!section[j].mappingOffRequest)
                         section[j].mappingOffTimer = (int)(fixUpdateHz * 1 * sped + ((double)fixUpdateHz * tool.turnOffDelay));
 
                     //decrement the off timer
-                    if (section[j].mappingOffTimer > 0) section[j].mappingOffTimer--;
+                    if (section[j].mappingOffTimer > 0)
+                        section[j].mappingOffTimer--;
 
                     //if Off mapping timer is zero, turn off the section, reset everything
                     if (section[j].mappingOffTimer == 0 && section[j].mappingOffRequest)
                     {
-                        if (section[j].isMappingOn) section[j].TurnMappingOff();
+                        if (section[j].isMappingOn)
+                            section[j].TurnMappingOff();
                         section[j].mappingOffRequest = false;
                     }
 
@@ -1974,16 +2036,26 @@ namespace AgOpenGPS
         public void SetZoom()
         {
             //match grid to cam distance and redo perspective
-            if (camera.camSetDistance <= -20000) camera.gridZoom = 2000;
-            else if (camera.camSetDistance >= -20000 && camera.camSetDistance < -10000) camera.gridZoom = 2012 * 2;
-            else if (camera.camSetDistance >= -10000 && camera.camSetDistance < -5000) camera.gridZoom = 1006 * 2;
-            else if (camera.camSetDistance >= -5000 && camera.camSetDistance < -2000) camera.gridZoom = 503 * 2;
-            else if (camera.camSetDistance >= -2000 && camera.camSetDistance < -1000) camera.gridZoom = 201.2 * 2;
-            else if (camera.camSetDistance >= -1000 && camera.camSetDistance < -500) camera.gridZoom = 100.6 * 2;
-            else if (camera.camSetDistance >= -500 && camera.camSetDistance < -250) camera.gridZoom = 50.3 * 2;
-            else if (camera.camSetDistance >= -250 && camera.camSetDistance < -150) camera.gridZoom = 25.15 * 2;
-            else if (camera.camSetDistance >= -150 && camera.camSetDistance < -50) camera.gridZoom = 10.06 * 2;
-            else if (camera.camSetDistance >= -50 && camera.camSetDistance < -1) camera.gridZoom = 5.03 * 2;
+            if (camera.camSetDistance <= -20000)
+                camera.gridZoom = 2000;
+            else if (camera.camSetDistance >= -20000 && camera.camSetDistance < -10000)
+                camera.gridZoom = 2012 * 2;
+            else if (camera.camSetDistance >= -10000 && camera.camSetDistance < -5000)
+                camera.gridZoom = 1006 * 2;
+            else if (camera.camSetDistance >= -5000 && camera.camSetDistance < -2000)
+                camera.gridZoom = 503 * 2;
+            else if (camera.camSetDistance >= -2000 && camera.camSetDistance < -1000)
+                camera.gridZoom = 201.2 * 2;
+            else if (camera.camSetDistance >= -1000 && camera.camSetDistance < -500)
+                camera.gridZoom = 100.6 * 2;
+            else if (camera.camSetDistance >= -500 && camera.camSetDistance < -250)
+                camera.gridZoom = 50.3 * 2;
+            else if (camera.camSetDistance >= -250 && camera.camSetDistance < -150)
+                camera.gridZoom = 25.15 * 2;
+            else if (camera.camSetDistance >= -150 && camera.camSetDistance < -50)
+                camera.gridZoom = 10.06 * 2;
+            else if (camera.camSetDistance >= -50 && camera.camSetDistance < -1)
+                camera.gridZoom = 5.03 * 2;
             //1.216 2.532
 
             oglMain.MakeCurrent();
@@ -1998,12 +2070,14 @@ namespace AgOpenGPS
         private void FileSaveEverythingBeforeClosingField()
         {
             //turn off contour line if on
-            if (ct.isContourOn) ct.StopContourLine(pivotAxlePos);
+            if (ct.isContourOn)
+                ct.StopContourLine(pivotAxlePos);
 
             //turn off all the sections
             for (int j = 0; j < tool.numOfSections + 1; j++)
             {
-                if (section[j].isMappingOn) section[j].TurnMappingOff();
+                if (section[j].isMappingOn)
+                    section[j].TurnMappingOff();
                 section[j].sectionOnOffCycle = false;
                 section[j].sectionOffRequest = false;
             }

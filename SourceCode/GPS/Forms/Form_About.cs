@@ -23,7 +23,7 @@ namespace AgOpenGPS
 
         private void Form_About_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Version " + Application.ProductVersion.ToString(CultureInfo.InvariantCulture);
+         //   lblVersion.Text = "Version " + Application.ProductVersion.ToString(CultureInfo.InvariantCulture);
 
             // Add a link to the LinkLabel.
             LinkLabel.Link link = new LinkLabel.Link { LinkData = "https://github.com/farmerbriantee/AgOpenGPS" };
@@ -41,6 +41,22 @@ namespace AgOpenGPS
         {
             Properties.Settings.Default.setDisplay_isTermsOn = true;
             Properties.Settings.Default.Save();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.adaptiveagrotech.com/");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/peymanmajidi/agriculture_open_gps");
+
         }
     }
 }

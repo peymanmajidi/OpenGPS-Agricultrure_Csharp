@@ -702,6 +702,16 @@ namespace AgOpenGPS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dish {
+            get {
+                object obj = ResourceManager.GetObject("dish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DisplayDrag {
             get {
                 object obj = ResourceManager.GetObject("DisplayDrag", resourceCulture);
@@ -855,6 +865,16 @@ namespace AgOpenGPS.Properties {
         internal static System.Drawing.Bitmap FileUse {
             get {
                 object obj = ResourceManager.GetObject("FileUse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flag_logo {
+            get {
+                object obj = ResourceManager.GetObject("flag_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

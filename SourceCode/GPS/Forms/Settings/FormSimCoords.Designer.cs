@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSimCoords));
             this.btnCancel = new System.Windows.Forms.Button();
             this.bntOK = new System.Windows.Forms.Button();
             this.nudLongitude = new System.Windows.Forms.NumericUpDown();
@@ -50,8 +51,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudLongitude)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLatitude)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -62,7 +71,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.btnCancel.Image = global::AgOpenGPS.Properties.Resources.Cancel64;
             this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(671, 346);
+            this.btnCancel.Location = new System.Drawing.Point(671, 475);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(95, 80);
             this.btnCancel.TabIndex = 5;
@@ -78,7 +87,7 @@
             this.bntOK.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.bntOK.Image = global::AgOpenGPS.Properties.Resources.OK64;
             this.bntOK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bntOK.Location = new System.Drawing.Point(783, 346);
+            this.bntOK.Location = new System.Drawing.Point(783, 475);
             this.bntOK.Name = "bntOK";
             this.bntOK.Size = new System.Drawing.Size(136, 80);
             this.bntOK.TabIndex = 4;
@@ -90,8 +99,8 @@
             // 
             this.nudLongitude.BackColor = System.Drawing.Color.AliceBlue;
             this.nudLongitude.DecimalPlaces = 7;
-            this.nudLongitude.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudLongitude.Location = new System.Drawing.Point(308, 377);
+            this.nudLongitude.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudLongitude.Location = new System.Drawing.Point(329, 490);
             this.nudLongitude.Maximum = new decimal(new int[] {
             180,
             0,
@@ -103,7 +112,7 @@
             0,
             -2147483648});
             this.nudLongitude.Name = "nudLongitude";
-            this.nudLongitude.Size = new System.Drawing.Size(298, 52);
+            this.nudLongitude.Size = new System.Drawing.Size(298, 57);
             this.nudLongitude.TabIndex = 48;
             this.nudLongitude.Value = new decimal(new int[] {
             1781234567,
@@ -116,8 +125,8 @@
             // 
             this.nudLatitude.BackColor = System.Drawing.Color.AliceBlue;
             this.nudLatitude.DecimalPlaces = 7;
-            this.nudLatitude.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudLatitude.Location = new System.Drawing.Point(12, 377);
+            this.nudLatitude.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudLatitude.Location = new System.Drawing.Point(33, 490);
             this.nudLatitude.Maximum = new decimal(new int[] {
             90,
             0,
@@ -129,7 +138,7 @@
             0,
             -2147483648});
             this.nudLatitude.Name = "nudLatitude";
-            this.nudLatitude.Size = new System.Drawing.Size(274, 52);
+            this.nudLatitude.Size = new System.Drawing.Size(274, 57);
             this.nudLatitude.TabIndex = 49;
             this.nudLatitude.Value = new decimal(new int[] {
             881234567,
@@ -142,7 +151,7 @@
             // 
             this.label18.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(20, 324);
+            this.label18.Location = new System.Drawing.Point(41, 437);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(252, 25);
             this.label18.TabIndex = 178;
@@ -153,7 +162,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(317, 324);
+            this.label1.Location = new System.Drawing.Point(338, 437);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 25);
             this.label1.TabIndex = 179;
@@ -166,7 +175,7 @@
             this.btnGetFieldFix.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnGetFieldFix.Image = global::AgOpenGPS.Properties.Resources.Boundary;
             this.btnGetFieldFix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGetFieldFix.Location = new System.Drawing.Point(594, 154);
+            this.btnGetFieldFix.Location = new System.Drawing.Point(603, 281);
             this.btnGetFieldFix.Name = "btnGetFieldFix";
             this.btnGetFieldFix.Size = new System.Drawing.Size(109, 110);
             this.btnGetFieldFix.TabIndex = 181;
@@ -180,7 +189,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(570, 85);
+            this.label3.Location = new System.Drawing.Point(579, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 23);
             this.label3.TabIndex = 182;
@@ -191,7 +200,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(563, 110);
+            this.label4.Location = new System.Drawing.Point(572, 237);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 23);
             this.label4.TabIndex = 183;
@@ -200,30 +209,30 @@
             // lblLatStart
             // 
             this.lblLatStart.AutoSize = true;
-            this.lblLatStart.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLatStart.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLatStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblLatStart.Location = new System.Drawing.Point(605, 86);
+            this.lblLatStart.Location = new System.Drawing.Point(614, 213);
             this.lblLatStart.Name = "lblLatStart";
-            this.lblLatStart.Size = new System.Drawing.Size(103, 23);
+            this.lblLatStart.Size = new System.Drawing.Size(104, 25);
             this.lblLatStart.TabIndex = 184;
             this.lblLatStart.Text = "-99.999999";
             // 
             // lblLonStart
             // 
             this.lblLonStart.AutoSize = true;
-            this.lblLonStart.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLonStart.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLonStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblLonStart.Location = new System.Drawing.Point(602, 111);
+            this.lblLonStart.Location = new System.Drawing.Point(611, 238);
             this.lblLonStart.Name = "lblLonStart";
-            this.lblLonStart.Size = new System.Drawing.Size(113, 23);
+            this.lblLonStart.Size = new System.Drawing.Size(114, 25);
             this.lblLonStart.TabIndex = 185;
             this.lblLonStart.Text = "-188.888888";
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(568, 14);
+            this.label7.Location = new System.Drawing.Point(577, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 61);
             this.label7.TabIndex = 186;
@@ -232,9 +241,9 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(761, 14);
+            this.label5.Location = new System.Drawing.Point(770, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 61);
             this.label5.TabIndex = 192;
@@ -244,22 +253,22 @@
             // lblGPSLon
             // 
             this.lblGPSLon.AutoSize = true;
-            this.lblGPSLon.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGPSLon.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGPSLon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblGPSLon.Location = new System.Drawing.Point(799, 111);
+            this.lblGPSLon.Location = new System.Drawing.Point(808, 238);
             this.lblGPSLon.Name = "lblGPSLon";
-            this.lblGPSLon.Size = new System.Drawing.Size(113, 23);
+            this.lblGPSLon.Size = new System.Drawing.Size(114, 25);
             this.lblGPSLon.TabIndex = 191;
             this.lblGPSLon.Text = "-189.999999";
             // 
             // lblGPSLat
             // 
             this.lblGPSLat.AutoSize = true;
-            this.lblGPSLat.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGPSLat.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGPSLat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblGPSLat.Location = new System.Drawing.Point(800, 86);
+            this.lblGPSLat.Location = new System.Drawing.Point(809, 213);
             this.lblGPSLat.Name = "lblGPSLat";
-            this.lblGPSLat.Size = new System.Drawing.Size(103, 23);
+            this.lblGPSLat.Size = new System.Drawing.Size(104, 25);
             this.lblGPSLat.TabIndex = 190;
             this.lblGPSLat.Text = "-88.777777";
             // 
@@ -270,7 +279,7 @@
             this.btnLoadGPSFix.Image = global::AgOpenGPS.Properties.Resources.Satellite64;
             this.btnLoadGPSFix.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLoadGPSFix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLoadGPSFix.Location = new System.Drawing.Point(774, 154);
+            this.btnLoadGPSFix.Location = new System.Drawing.Point(783, 281);
             this.btnLoadGPSFix.Name = "btnLoadGPSFix";
             this.btnLoadGPSFix.Size = new System.Drawing.Size(109, 110);
             this.btnLoadGPSFix.TabIndex = 187;
@@ -288,22 +297,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(756, 109);
+            this.label2.Location = new System.Drawing.Point(765, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 23);
+            this.label2.Size = new System.Drawing.Size(47, 25);
             this.label2.TabIndex = 194;
             this.label2.Text = "Lon:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(763, 84);
+            this.label6.Location = new System.Drawing.Point(772, 211);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 23);
+            this.label6.Size = new System.Drawing.Size(41, 25);
             this.label6.TabIndex = 193;
             this.label6.Text = "Lat:";
             // 
@@ -312,7 +321,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(75, 349);
+            this.label8.Location = new System.Drawing.Point(96, 462);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 25);
             this.label8.TabIndex = 195;
@@ -323,20 +332,60 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(370, 349);
+            this.label9.Location = new System.Drawing.Point(391, 462);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(163, 25);
             this.label9.TabIndex = 196;
             this.label9.Text = "( +180 to -180 )";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 119);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(542, 293);
+            this.pictureBox1.TabIndex = 197;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(931, 100);
+            this.panel1.TabIndex = 311;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(816, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 79);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(408, 94);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // FormSimCoords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::AgOpenGPS.Properties.Resources.LonLat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(931, 438);
+            this.ClientSize = new System.Drawing.Size(931, 567);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblGPSLon);
@@ -357,6 +406,7 @@
             this.Controls.Add(this.nudLongitude);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.bntOK);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Name = "FormSimCoords";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -365,6 +415,10 @@
             this.Load += new System.EventHandler(this.FormSimCoords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudLongitude)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLatitude)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +447,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

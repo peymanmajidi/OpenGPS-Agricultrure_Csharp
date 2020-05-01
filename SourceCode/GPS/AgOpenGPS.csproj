@@ -824,6 +824,8 @@
     <Content Include="AppIcon64.ico" />
     <Content Include="aChangeLog.txt" />
     <Content Include="logo.ico" />
+    <None Include="Resources\dish.png" />
+    <None Include="Resources\flag_logo.png" />
     <None Include="Resources\logo_row.png" />
     <None Include="Resources\logo_final.png" />
     <None Include="Resources\load_earth.gif" />

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormToolSettings));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabConfig = new System.Windows.Forms.TabPage();
             this.gboxAttachment = new System.Windows.Forms.GroupBox();
@@ -107,6 +108,9 @@
             this.lblInchesCm = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.bntOK = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabConfig.SuspendLayout();
             this.gboxAttachment.SuspendLayout();
@@ -142,11 +146,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSection1)).BeginInit();
             this.tabWorkSwitch.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabConfig);
             this.tabControl1.Controls.Add(this.tabHitch);
             this.tabControl1.Controls.Add(this.tabSettings);
@@ -154,8 +161,9 @@
             this.tabControl1.Controls.Add(this.tabWorkSwitch);
             this.tabControl1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(180, 69);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 114);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(978, 618);
@@ -167,6 +175,7 @@
             this.tabConfig.BackColor = System.Drawing.SystemColors.Window;
             this.tabConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tabConfig.Controls.Add(this.gboxAttachment);
+            this.tabConfig.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.tabConfig.Location = new System.Drawing.Point(4, 73);
             this.tabConfig.Margin = new System.Windows.Forms.Padding(4);
             this.tabConfig.Name = "tabConfig";
@@ -184,6 +193,7 @@
             this.gboxAttachment.Controls.Add(this.rbtnFixedRear);
             this.gboxAttachment.Controls.Add(this.rbtnFront);
             this.gboxAttachment.Controls.Add(this.rbtnTrailing);
+            this.gboxAttachment.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxAttachment.Location = new System.Drawing.Point(28, 80);
             this.gboxAttachment.Name = "gboxAttachment";
             this.gboxAttachment.Size = new System.Drawing.Size(888, 356);
@@ -279,6 +289,7 @@
             this.tabHitch.Controls.Add(this.nudForeAft);
             this.tabHitch.Controls.Add(this.nudHitchLength);
             this.tabHitch.Controls.Add(this.nudTankHitch);
+            this.tabHitch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.tabHitch.Location = new System.Drawing.Point(4, 73);
             this.tabHitch.Name = "tabHitch";
             this.tabHitch.Size = new System.Drawing.Size(970, 541);
@@ -388,6 +399,7 @@
             this.tabSettings.Controls.Add(this.label3);
             this.tabSettings.Controls.Add(this.nudLookAhead);
             this.tabSettings.Controls.Add(this.nudOverlap);
+            this.tabSettings.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.tabSettings.Location = new System.Drawing.Point(4, 73);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Size = new System.Drawing.Size(970, 541);
@@ -666,7 +678,7 @@
             this.tabSections.Controls.Add(this.nudSection2);
             this.tabSections.Controls.Add(this.nudSection1);
             this.tabSections.Controls.Add(this.label2);
-            this.tabSections.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabSections.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.tabSections.Location = new System.Drawing.Point(4, 73);
             this.tabSections.Name = "tabSections";
             this.tabSections.Size = new System.Drawing.Size(970, 541);
@@ -1346,6 +1358,7 @@
             this.tabWorkSwitch.BackgroundImage = global::AgOpenGPS.Properties.Resources.WorkSwitch;
             this.tabWorkSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tabWorkSwitch.Controls.Add(this.groupBox3);
+            this.tabWorkSwitch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.tabWorkSwitch.Location = new System.Drawing.Point(4, 73);
             this.tabWorkSwitch.Name = "tabWorkSwitch";
             this.tabWorkSwitch.Size = new System.Drawing.Size(970, 541);
@@ -1408,7 +1421,7 @@
             // 
             this.lblDoNotExceed.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.lblDoNotExceed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDoNotExceed.Location = new System.Drawing.Point(252, 623);
+            this.lblDoNotExceed.Location = new System.Drawing.Point(175, 740);
             this.lblDoNotExceed.Name = "lblDoNotExceed";
             this.lblDoNotExceed.Size = new System.Drawing.Size(391, 25);
             this.lblDoNotExceed.TabIndex = 24;
@@ -1420,7 +1433,7 @@
             this.lblSecTotalWidthInches.AutoSize = true;
             this.lblSecTotalWidthInches.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblSecTotalWidthInches.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSecTotalWidthInches.Location = new System.Drawing.Point(537, 648);
+            this.lblSecTotalWidthInches.Location = new System.Drawing.Point(460, 765);
             this.lblSecTotalWidthInches.Name = "lblSecTotalWidthInches";
             this.lblSecTotalWidthInches.Size = new System.Drawing.Size(43, 35);
             this.lblSecTotalWidthInches.TabIndex = 25;
@@ -1431,7 +1444,7 @@
             this.lblSecTotalWidthFeet.AutoSize = true;
             this.lblSecTotalWidthFeet.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblSecTotalWidthFeet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSecTotalWidthFeet.Location = new System.Drawing.Point(456, 648);
+            this.lblSecTotalWidthFeet.Location = new System.Drawing.Point(379, 765);
             this.lblSecTotalWidthFeet.Name = "lblSecTotalWidthFeet";
             this.lblSecTotalWidthFeet.Size = new System.Drawing.Size(49, 35);
             this.lblSecTotalWidthFeet.TabIndex = 24;
@@ -1440,11 +1453,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(12, 625);
+            this.label17.Location = new System.Drawing.Point(12, 739);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(153, 23);
+            this.label17.Size = new System.Drawing.Size(157, 25);
             this.label17.TabIndex = 89;
             this.label17.Text = "Measurements in";
             // 
@@ -1452,7 +1465,7 @@
             // 
             this.label16.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(272, 653);
+            this.label16.Location = new System.Drawing.Point(195, 770);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(180, 25);
             this.label16.TabIndex = 107;
@@ -1464,7 +1477,7 @@
             this.lblSecTotalWidthMeters.AutoSize = true;
             this.lblSecTotalWidthMeters.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblSecTotalWidthMeters.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSecTotalWidthMeters.Location = new System.Drawing.Point(495, 648);
+            this.lblSecTotalWidthMeters.Location = new System.Drawing.Point(418, 765);
             this.lblSecTotalWidthMeters.Name = "lblSecTotalWidthMeters";
             this.lblSecTotalWidthMeters.Size = new System.Drawing.Size(43, 35);
             this.lblSecTotalWidthMeters.TabIndex = 108;
@@ -1476,7 +1489,7 @@
             this.lblInchesCm.Font = new System.Drawing.Font("Tahoma", 24F);
             this.lblInchesCm.ForeColor = System.Drawing.Color.Red;
             this.lblInchesCm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblInchesCm.Location = new System.Drawing.Point(25, 653);
+            this.lblInchesCm.Location = new System.Drawing.Point(25, 767);
             this.lblInchesCm.Name = "lblInchesCm";
             this.lblInchesCm.Size = new System.Drawing.Size(111, 39);
             this.lblInchesCm.TabIndex = 109;
@@ -1489,7 +1502,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.btnCancel.Image = global::AgOpenGPS.Properties.Resources.Cancel64;
             this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(685, 624);
+            this.btnCancel.Location = new System.Drawing.Point(685, 738);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(88, 68);
             this.btnCancel.TabIndex = 3;
@@ -1502,7 +1515,7 @@
             this.bntOK.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.bntOK.Image = global::AgOpenGPS.Properties.Resources.OK64;
             this.bntOK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bntOK.Location = new System.Drawing.Point(818, 624);
+            this.bntOK.Location = new System.Drawing.Point(818, 738);
             this.bntOK.Name = "bntOK";
             this.bntOK.Size = new System.Drawing.Size(156, 68);
             this.bntOK.TabIndex = 0;
@@ -1510,13 +1523,44 @@
             this.bntOK.UseVisualStyleBackColor = true;
             this.bntOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(980, 100);
+            this.panel1.TabIndex = 311;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(866, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 93);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(408, 94);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormToolSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(980, 700);
+            this.ClientSize = new System.Drawing.Size(980, 821);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblInchesCm);
             this.Controls.Add(this.lblSecTotalWidthMeters);
             this.Controls.Add(this.label16);
@@ -1527,7 +1571,7 @@
             this.Controls.Add(this.lblSecTotalWidthFeet);
             this.Controls.Add(this.lblSecTotalWidthInches);
             this.Controls.Add(this.lblDoNotExceed);
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -1576,6 +1620,9 @@
             this.tabWorkSwitch.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1662,5 +1709,8 @@
         private System.Windows.Forms.Label lblTurnOffBelowUnits;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown nudLookAheadOff;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

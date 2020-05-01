@@ -106,11 +106,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.lblSecTotalWidthMeters = new System.Windows.Forms.Label();
             this.lblInchesCm = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.bntOK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.bntOK = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabConfig.SuspendLayout();
             this.gboxAttachment.SuspendLayout();
@@ -175,6 +175,11 @@
             this.tabConfig.BackColor = System.Drawing.SystemColors.Window;
             this.tabConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tabConfig.Controls.Add(this.gboxAttachment);
+            this.tabConfig.Controls.Add(this.lblDoNotExceed);
+            this.tabConfig.Controls.Add(this.lblSecTotalWidthInches);
+            this.tabConfig.Controls.Add(this.lblSecTotalWidthFeet);
+            this.tabConfig.Controls.Add(this.lblSecTotalWidthMeters);
+            this.tabConfig.Controls.Add(this.label16);
             this.tabConfig.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.tabConfig.Location = new System.Drawing.Point(4, 73);
             this.tabConfig.Margin = new System.Windows.Forms.Padding(4);
@@ -1421,7 +1426,7 @@
             // 
             this.lblDoNotExceed.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.lblDoNotExceed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDoNotExceed.Location = new System.Drawing.Point(175, 740);
+            this.lblDoNotExceed.Location = new System.Drawing.Point(396, 456);
             this.lblDoNotExceed.Name = "lblDoNotExceed";
             this.lblDoNotExceed.Size = new System.Drawing.Size(391, 25);
             this.lblDoNotExceed.TabIndex = 24;
@@ -1433,7 +1438,7 @@
             this.lblSecTotalWidthInches.AutoSize = true;
             this.lblSecTotalWidthInches.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblSecTotalWidthInches.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSecTotalWidthInches.Location = new System.Drawing.Point(460, 765);
+            this.lblSecTotalWidthInches.Location = new System.Drawing.Point(820, 481);
             this.lblSecTotalWidthInches.Name = "lblSecTotalWidthInches";
             this.lblSecTotalWidthInches.Size = new System.Drawing.Size(43, 35);
             this.lblSecTotalWidthInches.TabIndex = 25;
@@ -1444,7 +1449,7 @@
             this.lblSecTotalWidthFeet.AutoSize = true;
             this.lblSecTotalWidthFeet.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblSecTotalWidthFeet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSecTotalWidthFeet.Location = new System.Drawing.Point(379, 765);
+            this.lblSecTotalWidthFeet.Location = new System.Drawing.Point(739, 481);
             this.lblSecTotalWidthFeet.Name = "lblSecTotalWidthFeet";
             this.lblSecTotalWidthFeet.Size = new System.Drawing.Size(49, 35);
             this.lblSecTotalWidthFeet.TabIndex = 24;
@@ -1465,7 +1470,7 @@
             // 
             this.label16.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(195, 770);
+            this.label16.Location = new System.Drawing.Point(553, 489);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(180, 25);
             this.label16.TabIndex = 107;
@@ -1477,7 +1482,7 @@
             this.lblSecTotalWidthMeters.AutoSize = true;
             this.lblSecTotalWidthMeters.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblSecTotalWidthMeters.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSecTotalWidthMeters.Location = new System.Drawing.Point(418, 765);
+            this.lblSecTotalWidthMeters.Location = new System.Drawing.Point(778, 481);
             this.lblSecTotalWidthMeters.Name = "lblSecTotalWidthMeters";
             this.lblSecTotalWidthMeters.Size = new System.Drawing.Size(43, 35);
             this.lblSecTotalWidthMeters.TabIndex = 108;
@@ -1494,34 +1499,6 @@
             this.lblInchesCm.Size = new System.Drawing.Size(111, 39);
             this.lblInchesCm.TabIndex = 109;
             this.lblInchesCm.Text = "Inches";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.btnCancel.Image = global::AgOpenGPS.Properties.Resources.Cancel64;
-            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(685, 738);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(88, 68);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // bntOK
-            // 
-            this.bntOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bntOK.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.bntOK.Image = global::AgOpenGPS.Properties.Resources.OK64;
-            this.bntOK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bntOK.Location = new System.Drawing.Point(818, 738);
-            this.bntOK.Name = "bntOK";
-            this.bntOK.Size = new System.Drawing.Size(156, 68);
-            this.bntOK.TabIndex = 0;
-            this.bntOK.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bntOK.UseVisualStyleBackColor = true;
-            this.bntOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // panel1
             // 
@@ -1553,6 +1530,42 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnCancel.Image = global::AgOpenGPS.Properties.Resources.Cancel64;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancel.Location = new System.Drawing.Point(400, 736);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(237, 63);
+            this.btnCancel.TabIndex = 113;
+            this.btnCancel.Text = "Cancel         ";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            // 
+            // bntOK
+            // 
+            this.bntOK.BackColor = System.Drawing.SystemColors.Control;
+            this.bntOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bntOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntOK.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.bntOK.Image = global::AgOpenGPS.Properties.Resources.OK64;
+            this.bntOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntOK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.bntOK.Location = new System.Drawing.Point(643, 735);
+            this.bntOK.Name = "bntOK";
+            this.bntOK.Size = new System.Drawing.Size(325, 63);
+            this.bntOK.TabIndex = 112;
+            this.bntOK.Text = "Save Changes          ";
+            this.bntOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bntOK.UseVisualStyleBackColor = false;
+            this.bntOK.Click += new System.EventHandler(this.bntOK_Click);
+            // 
             // FormToolSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1560,17 +1573,12 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(980, 821);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bntOK);
             this.Controls.Add(this.lblInchesCm);
-            this.Controls.Add(this.lblSecTotalWidthMeters);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.bntOK);
-            this.Controls.Add(this.lblSecTotalWidthFeet);
-            this.Controls.Add(this.lblSecTotalWidthInches);
-            this.Controls.Add(this.lblDoNotExceed);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1584,6 +1592,7 @@
             this.Load += new System.EventHandler(this.FormToolSettings_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabConfig.ResumeLayout(false);
+            this.tabConfig.PerformLayout();
             this.gboxAttachment.ResumeLayout(false);
             this.tabHitch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudForeAft)).EndInit();
@@ -1634,8 +1643,6 @@
         private System.Windows.Forms.TabPage tabConfig;
         private System.Windows.Forms.TabPage tabSections;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button bntOK;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.NumericUpDown nudSection5;
         private System.Windows.Forms.NumericUpDown nudSection4;
         private System.Windows.Forms.NumericUpDown nudSection3;
@@ -1712,5 +1719,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button bntOK;
     }
 }

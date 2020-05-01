@@ -621,6 +621,16 @@ namespace AgOpenGPS
             btnCancel.Focus();
         }
 
+        private void bntOK_Click(object sender, EventArgs e)
+        {
+            btnOK_Click(null, null);
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            btnCancel_Click(null, null);
+        }
+
         private void NudSection9_Enter(object sender, EventArgs e)
         {
             mf.KeypadToNUD((NumericUpDown)sender);

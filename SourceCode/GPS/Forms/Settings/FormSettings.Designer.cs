@@ -695,9 +695,9 @@
             this.btnCancel.Image = global::AgOpenGPS.Properties.Resources.Cancel64;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(342, 548);
+            this.btnCancel.Location = new System.Drawing.Point(349, 548);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(247, 63);
+            this.btnCancel.Size = new System.Drawing.Size(240, 63);
             this.btnCancel.TabIndex = 111;
             this.btnCancel.Text = "Cancel         ";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

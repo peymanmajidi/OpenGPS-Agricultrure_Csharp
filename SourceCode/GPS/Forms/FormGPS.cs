@@ -342,6 +342,11 @@ namespace AgOpenGPS
             goPathMenu.Text = gStr.gsGoStop;
             pausePathMenu.Text = gStr.gsPauseResume;
 
+            tabHome.Text = "      " + gStr.home_tab + "      ";
+            tabDrive.Text = "      " + gStr.drive_tab + "      ";
+            tabPath.Text = "      " + gStr.path_tab + "      ";
+            tabInfo.Text = "      " + gStr.info_tab + "      ";
+
             stripSectionColor.Text = Application.ProductVersion.ToString(CultureInfo.InvariantCulture);
 
 
@@ -1583,7 +1588,7 @@ namespace AgOpenGPS
 
             //update the menu
             this.menustripLanguage.Enabled = false;
-            layoutPanelRight.Enabled = true;
+            tabDrive.Enabled = true;
             //boundaryToolStripBtn.Enabled = true;
             toolStripBtnDropDownBoundaryTools.Enabled = true;
         }
@@ -1613,7 +1618,7 @@ namespace AgOpenGPS
             turn.turnArr?.Clear();
             hd.headArr[0].hdLine?.Clear();
 
-            layoutPanelRight.Enabled = false;
+            tabDrive.Enabled = false;
             toolStripBtnDropDownBoundaryTools.Enabled = false;
 
             menustripLanguage.Enabled = true;
@@ -1795,13 +1800,13 @@ namespace AgOpenGPS
 
                 if (isJobStarted)
                 {
-                    layoutPanelRight.Enabled = true;
+                    tabDrive.Enabled = true;
                     //boundaryToolStripBtn.Enabled = true;
                     toolStripBtnDropDownBoundaryTools.Enabled = true;
                 }
                 else
                 {
-                    layoutPanelRight.Enabled = false;
+                    tabDrive.Enabled = false;
                     //boundaryToolStripBtn.Enabled = false;
                     toolStripBtnDropDownBoundaryTools.Enabled = false;
                 }
@@ -1819,7 +1824,7 @@ namespace AgOpenGPS
                         Settings.Default.setF_CurrentDir = currentFieldDirectory;
                         Settings.Default.Save();
                         FileSaveEverythingBeforeClosingField();
-                        layoutPanelRight.Enabled = false;
+                        tabDrive.Enabled = false;
                         //boundaryToolStripBtn.Enabled = false;
                         toolStripBtnDropDownBoundaryTools.Enabled = false;
                         break;
@@ -1834,7 +1839,7 @@ namespace AgOpenGPS
                         Settings.Default.setF_CurrentDir = currentFieldDirectory;
                         Settings.Default.Save();
                         FileSaveEverythingBeforeClosingField();
-                        layoutPanelRight.Enabled = false;
+                        tabDrive.Enabled = false;
                         //boundaryToolStripBtn.Enabled = false;
                         toolStripBtnDropDownBoundaryTools.Enabled = false;
 

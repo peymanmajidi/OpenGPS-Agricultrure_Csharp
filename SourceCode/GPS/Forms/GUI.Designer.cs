@@ -199,7 +199,7 @@ namespace AgOpenGPS
 
             FixPanelsAndMenus();
 
-            layoutPanelRight.Enabled = false;
+            tabDrive.Enabled = false;
             //boundaryToolStripBtn.Enabled = false;
             toolStripBtnDropDownBoundaryTools.Enabled = false;
 

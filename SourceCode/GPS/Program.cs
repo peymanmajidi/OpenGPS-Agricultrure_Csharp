@@ -26,11 +26,11 @@ namespace AgOpenGPS
                     RegistryKey Key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AgOpenGPS");
 
                     //storing the values
-                    Key.SetValue("Language", "en");
+                    Key.SetValue("Language", "de");
                     Key.SetValue("Directory", "Default");
                     Key.Close();
 
-                    Settings.Default.setF_culture = "en";
+                    Settings.Default.setF_culture = "de";
                     Settings.Default.setF_workingDirectory = "Default";
                     Settings.Default.Save();
                 }

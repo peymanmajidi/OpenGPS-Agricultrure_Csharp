@@ -944,7 +944,7 @@ namespace AgOpenGPS
             {
                 var form = new FormTimedMessage(1500, gStr.gsNoABLineActive, gStr.gsPleaseEnterABLine);
                 form.Show();
-                layoutPanelRight.Enabled = true;
+                tabDrive.Enabled = true;
                 ABLine.isEditing = false;
                 return;
             }

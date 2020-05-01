@@ -61,6 +61,15 @@ namespace AgOpenGPS {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Drive.
+        /// </summary>
+        public static string drive_tab {
+            get {
+                return ResourceManager.GetString("drive_tab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;&lt; &gt;&gt; Snap Distance.
         /// </summary>
         public static string gs____SnapDistance {
@@ -4530,6 +4539,33 @@ namespace AgOpenGPS {
         public static string gsZoom {
             get {
                 return ResourceManager.GetString("gsZoom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string home_tab {
+            get {
+                return ResourceManager.GetString("home_tab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Info.
+        /// </summary>
+        public static string info_tab {
+            get {
+                return ResourceManager.GetString("info_tab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string path_tab {
+            get {
+                return ResourceManager.GetString("path_tab", resourceCulture);
             }
         }
     }

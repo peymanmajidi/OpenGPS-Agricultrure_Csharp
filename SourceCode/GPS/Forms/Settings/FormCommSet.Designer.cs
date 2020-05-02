@@ -60,9 +60,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnOpenSerialAutoSteer = new System.Windows.Forms.Button();
             this.btnCloseSerialAutoSteer = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -457,12 +459,24 @@
             this.btnCloseSerialAutoSteer.UseVisualStyleBackColor = false;
             this.btnCloseSerialAutoSteer.Click += new System.EventHandler(this.btnCloseSerialAutoSteer_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AgOpenGPS.Properties.Resources.flag_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(849, 20);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 96);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 94;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormCommSet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(956, 567);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnRescan);
             this.Controls.Add(this.btnSerialOK);
@@ -481,6 +495,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -518,5 +533,6 @@
         private System.Windows.Forms.Button btnOpenSerialAutoSteer;
         private System.Windows.Forms.Button btnCloseSerialAutoSteer;
         private System.Windows.Forms.CheckBox usejrk;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

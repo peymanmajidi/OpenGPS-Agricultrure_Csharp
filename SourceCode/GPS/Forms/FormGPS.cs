@@ -693,12 +693,18 @@ namespace AgOpenGPS
             hsbarStepDistance.Value = 30;
             hsbarStepDistance_Scroll(sender, null);
             panelSim.Visible = false;
-          
+
+            isSpeedoOn = true;
+            speedoOnToolStripMenuItem.Checked = isSpeedoOn;
+            Settings.Default.setMenu_isSpeedoOn = isSpeedoOn;
+            isCompassOn = true;
+            compassOnToolStripMenuItem.Checked = isCompassOn;
+            Settings.Default.setMenu_isCompassOn = isCompassOn;
+            Settings.Default.Save();
             this.Refresh();
             new Thread(() =>
             {
-                Thread.Sleep(2500);
-                lblPlzWait.Visible = picLoading.Visible = false;
+                Thread.Sleep(6000);
 
                 oglMain.Visible = true;
 
@@ -706,7 +712,8 @@ namespace AgOpenGPS
 
                 oglBack.Visible = true;
                 oglZoom.Visible = true;
-                Thread.Sleep(1500);
+                lblPlzWait.Visible = picLoading.Visible = false;
+                Thread.Sleep(1000);
 
                 panelSim.Visible = true;
                 

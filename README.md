@@ -15,7 +15,7 @@ Discussed in detail: https://agopengps.discourse.group/
  Precision Mapping and Section Control Software
 
 
-
+![shot](shot.png)
 
 <span style="color:red">Happy Codding 🍓</span>
 
